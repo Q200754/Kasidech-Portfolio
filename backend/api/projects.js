@@ -1,50 +1,23 @@
 import express from 'express';
-import { PrismaClient } from '@prisma/client';
 
 const router = express.Router();
 
-// ป้องกันปัญหา Prisma Client Connection Overflow บน Serverless
-const prisma = global.prisma || new PrismaClient();
-if (process.env.NODE_ENV !== 'production') global.prisma = prisma;
-
-// GET /api/projects - ดึงรายการผลงานทั้งหมด
-router.get('/', async(req, res) => {
-    try {
-        const projects = await prisma.project.findMany({
-            orderBy: {
-                createdAt: 'desc'
-            }
-        });
-        return res.status(200).json(projects);
-    } catch (error) {
-        console.error('Error fetching projects:', error);
-        return res.status(500).json({
-            error: 'Failed to fetch projects',
-            message: error.message
-        });
-    }
-});
-
-// GET /api/projects/:id - ดึงข้อมูลผลงานเดี่ยวตาม ID
-router.get('/:id', async(req, res) => {
-    try {
-        const { id } = req.params;
-        const project = await prisma.project.findUnique({
-            where: { id: parseInt(id) || id }
-        });
-
-        if (!project) {
-            return res.status(404).json({ error: 'Project not found' });
+// GET /api/projects - ส่งข้อมูล Mock Data กลับไป
+router.get('/', (req, res) => {
+    const projects = [{
+            title: 'Full-Stack E-Commerce Platform',
+            description: 'ระบบร้านค้าออนไลน์รองรับการชำระเงิน ตรวจสอบสต็อกสินค้า และการจัดการข้อมูลหลังบ้าน',
+            image: 'https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=800&auto=format&fit=crop',
+            tags: ['React', 'Node.js', 'PostgreSQL']
+        },
+        {
+            title: 'Task Management System',
+            description: 'แอปพลิเคชันบริหารจัดการงานในทีมแบบ Real-time พร้อมแดชบอร์ดสรุปความก้าวหน้า',
+            image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop',
+            tags: ['Next.js', 'TailwindCSS', 'Prisma']
         }
-
-        return res.status(200).json(project);
-    } catch (error) {
-        console.error('Error fetching project by ID:', error);
-        return res.status(500).json({
-            error: 'Failed to fetch project detail',
-            message: error.message
-        });
-    }
+    ];
+    res.status(200).json(projects);
 });
 
 export default router;
