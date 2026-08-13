@@ -1,4 +1,3 @@
-const { DatabaseSync } = require('node:sqlite');
 const path = require('path');
 const fs = require('fs');
 const crypto = require('crypto');
@@ -55,6 +54,7 @@ function connectDB() {
     console.log('Connected to MySQL Database.');
   } else {
     // Default to SQLite
+    const { DatabaseSync } = require('node:sqlite');
     const dbFile = process.env.DB_FILE || 'database.sqlite';
     const dbPath = path.resolve(__dirname, '..', dbFile);
     const dbDir = path.dirname(dbPath);
