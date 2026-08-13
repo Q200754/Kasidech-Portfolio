@@ -115,7 +115,7 @@
             </div>
 
             <div id="project-list" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- JS ดึงข้อมูลจาก API มาใส่ -->
+                <!-- JS ใส่การ์ดข้อมูลตัวอย่าง -->
             </div>
         </section>
 
@@ -161,95 +161,46 @@
     <script>
         lucide.createIcons();
 
-        const API_URL = '/api';
-
-        async function loadProjects() {
+        function loadProjects() {
             const container = document.getElementById('project-list');
 
-            // แสดงสถานะ Loading ก่อนเริ่มดึงข้อมูล
-            container.innerHTML = `
-                <div class="col-span-full glass-card p-12 rounded-2xl text-center text-gray-400 text-sm flex flex-col items-center justify-center gap-3">
-                    <i data-lucide="loader-2" class="w-6 h-6 animate-spin text-accent"></i>
-                    <span>กำลังโหลดข้อมูลผลงาน...</span>
-                </div>`;
-            lucide.createIcons();
+            // ข้อมูลการ์ดผลงานตัวอย่าง (Mock Data)
+            const mockProjects = [{
+                title: 'Full-Stack E-Commerce Platform',
+                description: 'ระบบร้านค้าออนไลน์รองรับการชำระเงิน ตรวจสอบสต็อกสินค้า และการจัดการข้อมูลหลังบ้านสำหรับผู้ดูแลระบบ',
+                image: 'https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=800&auto=format&fit=crop',
+                tags: ['React', 'Node.js', 'PostgreSQL']
+            }, {
+                title: 'Task Management System',
+                description: 'แอปพลิเคชันบริหารจัดการงานในทีมแบบ Real-time พร้อมแดชบอร์ดสรุปความก้าวหน้าของโปรเจกต์',
+                image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop',
+                tags: ['Next.js', 'TailwindCSS', 'Prisma']
+            }];
 
-            try {
-                const res = await fetch(`${API_URL}/projects`);
-                if (!res.ok) throw new Error('Network response was not ok');
-
-                const projects = await res.json();
-
-                if (!projects || projects.length === 0) {
-                    container.innerHTML = `
-                        <div class="col-span-full glass-card p-8 rounded-2xl text-center text-gray-400 text-sm">
-                            ยังไม่มีข้อมูลผลงานในขณะนี้
-                        </div>`;
-                    return;
-                }
-
-                container.innerHTML = projects.map(p => `
-                    <div class="glass-card rounded-2xl overflow-hidden group hover:border-accent/40 transition-all duration-300 flex flex-col h-full">
-                        <div class="h-48 bg-dark-card overflow-hidden relative">
-                            <img src="${p.coverImage || 'https://via.placeholder.com/400x250/121216/FF6FAE?text=Project+Preview'}" 
-                                alt="${p.titleTh || 'Project Image'}" 
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            container.innerHTML = mockProjects.map(p => `
+                <div class="glass-card rounded-2xl overflow-hidden group hover:border-accent/40 transition-all duration-300 flex flex-col h-full">
+                    <div class="h-48 bg-dark-card overflow-hidden relative">
+                        <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-accent transition-colors">${p.title}</h3>
+                            <p class="text-xs text-gray-400 leading-relaxed mt-2">${p.description}</p>
                         </div>
-                        <div class="p-6 space-y-2 flex-1 flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-lg font-bold text-white group-hover:text-accent transition-colors">${p.titleTh || p.title || 'Untitled Project'}</h3>
-                                <p class="text-xs text-gray-400 leading-relaxed mt-2">${p.shortDescTh || p.description || ''}</p>
-                            </div>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            ${p.tags.map(tag => `<span class="text-[10px] bg-white/5 border border-white/10 px-2.5 py-1 rounded-md text-gray-300">${tag}</span>`).join('')}
                         </div>
                     </div>
-                `).join('');
-            } catch (err) {
-                container.innerHTML = `
-                    <div class="col-span-full glass-card p-8 rounded-2xl text-center text-gray-400 text-sm">
-                        ไม่สามารถเชื่อมต่อกับ Server ได้
-                    </div>`;
-            } finally {
-                lucide.createIcons();
-            }
+                </div>
+            `).join('');
+
+            lucide.createIcons();
         }
 
-        document.getElementById('contact-form').addEventListener('submit', async(e) => {
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
             e.preventDefault();
-            const submitBtn = document.getElementById('submit-btn');
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            // ปิดการกดปุ่มชั่วคราวเพื่อป้องกันกดซ้ำ
-            submitBtn.disabled = true;
-            submitBtn.querySelector('span').innerText = 'กำลังส่ง...';
-
-            try {
-                const res = await fetch(`${API_URL}/messages`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        name,
-                        email,
-                        message
-                    })
-                });
-
-                if (res.ok) {
-                    alert('ส่งข้อความเรียบร้อยแล้ว!');
-                    e.target.reset();
-                } else {
-                    throw new Error('Failed to send message');
-                }
-            } catch (err) {
-                alert('เกิดข้อผิดพลาด ไม่สามารถส่งข้อความได้');
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.querySelector('span').innerText = 'ส่งข้อความ';
-                lucide.createIcons();
-            }
+            alert('ส่งข้อความเรียบร้อยแล้ว!');
+            e.target.reset();
         });
 
         loadProjects();
