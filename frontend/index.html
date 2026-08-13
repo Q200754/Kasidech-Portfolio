@@ -168,18 +168,19 @@
             const mockProjects = [{
                 title: 'ระบบจัดเลี้ยงโรงอาหาร',
                 description: 'ระบบบริหารจัดการการจัดเลี้ยงและอาหารสำหรับโรงเรียน/สถาบัน',
-                image: 'images/catering.png',
+                image: '/catering.png',
+                link: 'https://canteen-meal-notification-system.vercel.app/', // <-- ใส่ลิงก์ปลายทางตรงนี้
                 tags: ['Web Application', 'Node.js', 'Database']
             }, {
                 title: 'Task Management System',
                 description: 'แอปพลิเคชันบริหารจัดการงานในทีมแบบ Real-time พร้อมแดชบอร์ดสรุปความก้าวหน้าของโปรเจกต์',
                 image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop',
+                link: '#', // <-- ใส่ลิงก์ปลายทางตรงนี้
                 tags: ['Next.js', 'TailwindCSS', 'Prisma']
             }];
 
-            container.innerHTML = mockProjects.
-            map(p => `
-                <div class="glass-card rounded-2xl overflow-hidden group hover:border-accent/40 transition-all duration-300 flex flex-col h-full">
+            container.innerHTML = mockProjects.map(p => `
+                <a href="${p.link || '#'}" target="_blank" class="glass-card rounded-2xl overflow-hidden group hover:border-accent/40 transition-all duration-300 flex flex-col h-full cursor-pointer block">
                     <div class="h-48 bg-dark-card overflow-hidden relative">
                         <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
@@ -192,7 +193,7 @@
                             ${p.tags.map(tag => `<span class="text-[10px] bg-white/5 border border-white/10 px-2.5 py-1 rounded-md text-gray-300">${tag}</span>`).join('')}
                         </div>
                     </div>
-                </div>
+                </a>
             `).join('');
 
             lucide.createIcons();
