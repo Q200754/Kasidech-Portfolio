@@ -166,10 +166,10 @@
 
             // ข้อมูลการ์ดผลงานตัวอย่าง (Mock Data)
             const mockProjects = [{
-                title: 'Full-Stack E-Commerce Platform',
-                description: 'ระบบร้านค้าออนไลน์รองรับการชำระเงิน ตรวจสอบสต็อกสินค้า และการจัดการข้อมูลหลังบ้านสำหรับผู้ดูแลระบบ',
-                image: 'C:\\Users\\PC\\Desktop\\kasidech-portfolio\\frontend\\images\\ระบบจัดเลี้ยงโรงอาหาร.png',
-                tags: ['React', 'Node.js', 'PostgreSQL']
+                title: 'ระบบจัดเลี้ยงโรงอาหาร',
+                description: 'ระบบบริหารจัดการการจัดเลี้ยงและอาหารสำหรับโรงเรียน/สถาบัน',
+                image: '/images/catering.png', // <-- ใส่ Path แบบ Relative ที่ชี้ไปโฟลเดอร์ images
+                tags: ['Web Application', 'Node.js', 'Database']
             }, {
                 title: 'Task Management System',
                 description: 'แอปพลิเคชันบริหารจัดการงานในทีมแบบ Real-time พร้อมแดชบอร์ดสรุปความก้าวหน้าของโปรเจกต์',
@@ -177,7 +177,8 @@
                 tags: ['Next.js', 'TailwindCSS', 'Prisma']
             }];
 
-            container.innerHTML = mockProjects.map(p => `
+            container.innerHTML = mockProjects.
+            map(p => `
                 <div class="glass-card rounded-2xl overflow-hidden group hover:border-accent/40 transition-all duration-300 flex flex-col h-full">
                     <div class="h-48 bg-dark-card overflow-hidden relative">
                         <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
