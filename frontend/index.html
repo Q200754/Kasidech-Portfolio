@@ -208,7 +208,43 @@
             lucide.createIcons();
         }
 
-                        container.innerHTML = mockProjects.map(p => `
+                     function loadProjects() {
+            const container = document.getElementById('project-list');
+
+            // ข้อมูลการ์ดผลงาน (Mock Data)
+            const mockProjects = [
+                {
+                    title: 'ระบบจัดเลี้ยงโรงอาหาร',
+                    description: 'ระบบบริหารจัดการการจัดเลี้ยงและอาหารสำหรับโรงเรียน/สถาบัน',
+                    image: '/images/catering.png',
+                    link: 'https://github.com/your-username/catering-system',
+                    tags: ['Web Application', 'Node.js', 'Database']
+                },
+                {
+                    title: 'PRTC Meeting Booking',
+                    description: 'ระบบจองห้องประชุมและติดตามการนัดหมายภายในองค์กรแบบเรียลไทม์',
+                    image: '/images/PRTC-Meeting-Booking.png',
+                    link: 'https://prtc-meeting-booking.vercel.app/',
+                    tags: ['Next.js', 'TailwindCSS', 'Prisma']
+                },
+                // ถ้าต้องการเพิ่มผลงานชิ้นที่ 3 สามารถใส่ต่อตรงนี้ได้เลยครับ
+                {
+                    title: 'PRTC Meeting Booking',
+                    description: 'ระบบจองห้องประชุมและติดตามการนัดหมายภายในองค์กรแบบเรียลไทม์',
+                    image: '/images/PRTC-Meeting-Booking.png',
+                    link: 'https://prtc-meeting-booking.vercel.app/',
+                    tags: ['Next.js', 'TailwindCSS', 'Prisma']
+                },
+                {
+                    title: 'PRTC-Vehicle-Request-Management-System',
+                    description: 'เป็นโปรเจกต์ที่พัฒนาขึ้นเพื่อใช้ในการจัดการคำร้องขอใช้รถยนต์ของวิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา โดยมีฟีเจอร์หลักๆ เช่น การสร้างคำร้องขอ การอนุมัติคำร้องขอ และการติดตามสถานะของคำร้องขอ',
+                    image: '/images/ชื่อรูปภาพของคุณ.png', // ใส่ชื่อรูปภาพที่เก็บในโฟลเดอร์ images
+                    link: 'https://your-project-3-link.vercel.app/', // ใส่ลิงก์ผลงาน
+                    tags: ['React', 'TailwindCSS', 'API'] // ใส่ Tag สกิลที่ใช้
+                }
+            ];
+
+            container.innerHTML = mockProjects.map(p => `
                 <a href="${p.link || '#'}" target="_blank" class="glass-card rounded-2xl overflow-hidden group hover:border-accent/40 transition-all duration-300 flex flex-col h-full cursor-pointer block">
                     <div class="h-48 bg-dark-card overflow-hidden relative">
                         <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
