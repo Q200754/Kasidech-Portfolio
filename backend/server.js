@@ -51,7 +51,7 @@ app.use('/api/logs', require('./routes/logRoutes'));
 
 // Fallback HTML router for frontend single page router in production
 if (process.env.NODE_ENV === 'production') {
-  app.get('*', (req, res) => {
+  app.get('(.*)', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
   });
 } else {
