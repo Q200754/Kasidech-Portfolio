@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-zinc-50 text-zinc-800 font-sans antialiased selection:bg-accent selection:text-white transition-colors duration-300;
+  }
+  body.dark {
+    @apply bg-zinc-950 text-zinc-200;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-zinc-900 dark:text-zinc-100;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-zinc-100 dark:bg-zinc-900;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-300 dark:bg-zinc-700 rounded-full hover:bg-accent transition-colors;
+}
+
+/* Glassmorphism utility classes */
+.glass-panel {
+  @apply bg-white/70 dark:bg-zinc-900/60 backdrop-blur-md border border-zinc-200/50 dark:border-zinc-800/40;
+}
+.glass-panel-hover {
+  @apply transition-all duration-300 hover:bg-white/90 dark:hover:bg-zinc-900/80 hover:border-accent/40 dark:hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5;
+}
+
+.glass-nav {
+  @apply bg-white/70 dark:bg-zinc-950/70 backdrop-blur-lg border-b border-zinc-200/40 dark:border-zinc-800/40;
+}
+
+/* Gradient Background Effects */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}
+.dark .bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-900 dark:from-white dark:via-zinc-300 dark:to-zinc-100;
+}
+
+.text-gradient-accent {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent via-pink-400 to-accent-dark;
+}
+
+/* Custom typing cursor */
+.typing-cursor::after {
+  content: '|';
+  @apply text-accent animate-pulse ml-0.5;
+}
+
+/* Masonry grid column break utilities */
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1.5rem;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
