@@ -74,18 +74,18 @@
         <!-- Header / Navbar -->
         <header class="py-8 flex items-center justify-between">
             <a href="#" class="text-xl font-extrabold tracking-wider">
-        KASIDET<span class="text-accent">.DEV</span>
-      </a>
+                KASIDECH<span class="text-accent">.DEV</span>
+            </a>
             <a href="#contact" class="px-5 py-2 rounded-full text-xs font-semibold bg-white/5 border border-white/10 hover:border-accent hover:text-accent transition-all duration-300">
-        Contact Me
-      </a>
+                Contact Me
+            </a>
         </header>
 
         <!-- Hero Section -->
         <section class="py-16 text-center space-y-5">
             <span class="text-accent font-semibold tracking-widest text-xs uppercase px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 inline-block">
-        FULL-STACK DEVELOPER
-      </span>
+                FULL-STACK DEVELOPER
+            </span>
 
             <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
                 กษิเดช น้อยลมทวน
@@ -97,11 +97,11 @@
 
             <div class="pt-4 flex items-center justify-center gap-4">
                 <a href="#projects" class="px-7 py-3 rounded-xl bg-accent text-white text-sm font-semibold hover:bg-accent-hover transition-all shadow-lg shadow-accent/20 hover:scale-[1.02]">
-          View Projects
-        </a>
+                    View Projects
+                </a>
                 <a href="#contact" class="px-7 py-3 rounded-xl border border-white/10 text-gray-300 text-sm font-semibold hover:bg-white/5 transition-all">
-          Get In Touch
-        </a>
+                    Get In Touch
+                </a>
             </div>
         </section>
 
@@ -129,30 +129,30 @@
 
                 <form id="contact-form" class="space-y-5">
                     <div class="space-y-1.5">
-                        <label class="text-xs font-semibold text-gray-400 block">ชื่อของคุณ</label>
+                        <label for="name" class="text-xs font-semibold text-gray-400 block">ชื่อของคุณ</label>
                         <input type="text" id="name" required placeholder="เช่น สมชาย ใจดี" class="w-full px-4 py-3 rounded-xl bg-dark-card border border-dark-border text-white placeholder-gray-600 text-sm focus:border-accent outline-none transition-colors" />
                     </div>
 
                     <div class="space-y-1.5">
-                        <label class="text-xs font-semibold text-gray-400 block">อีเมล</label>
+                        <label for="email" class="text-xs font-semibold text-gray-400 block">อีเมล</label>
                         <input type="email" id="email" required placeholder="your.email@example.com" class="w-full px-4 py-3 rounded-xl bg-dark-card border border-dark-border text-white placeholder-gray-600 text-sm focus:border-accent outline-none transition-colors" />
                     </div>
 
                     <div class="space-y-1.5">
-                        <label class="text-xs font-semibold text-gray-400 block">ข้อความ</label>
+                        <label for="message" class="text-xs font-semibold text-gray-400 block">ข้อความ</label>
                         <textarea id="message" rows="4" required placeholder="พิมพ์รายละเอียดข้อความของคุณ..." class="w-full px-4 py-3 rounded-xl bg-dark-card border border-dark-border text-white placeholder-gray-600 text-sm focus:border-accent outline-none transition-colors resize-none"></textarea>
                     </div>
 
-                    <button type="submit" class="w-full py-3.5 rounded-xl bg-accent text-white font-semibold hover:bg-accent-hover transition-all shadow-lg shadow-accent/20 flex items-center justify-center gap-2">
-            <i data-lucide="send" class="w-4 h-4"></i> ส่งข้อความ
-          </button>
+                    <button type="submit" id="submit-btn" class="w-full py-3.5 rounded-xl bg-accent text-white font-semibold hover:bg-accent-hover transition-all shadow-lg shadow-accent/20 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
+                        <i data-lucide="send" class="w-4 h-4"></i> <span>ส่งข้อความ</span>
+                    </button>
                 </form>
             </div>
         </section>
 
         <!-- Footer -->
         <footer class="py-8 border-t border-white/10 text-center text-xs text-gray-500">
-            © 2026 Kasidet Nointwan. All rights reserved.
+            © 2026 Kasidech Noytomtuon. All rights reserved.
         </footer>
 
     </div>
@@ -165,43 +165,64 @@
 
         async function loadProjects() {
             const container = document.getElementById('project-list');
+
+            // แสดงสถานะ Loading ก่อนเริ่มดึงข้อมูล
+            container.innerHTML = `
+                <div class="col-span-full glass-card p-12 rounded-2xl text-center text-gray-400 text-sm flex flex-col items-center justify-center gap-3">
+                    <i data-lucide="loader-2" class="w-6 h-6 animate-spin text-accent"></i>
+                    <span>กำลังโหลดข้อมูลผลงาน...</span>
+                </div>`;
+            lucide.createIcons();
+
             try {
                 const res = await fetch(`${API_URL}/projects`);
+                if (!res.ok) throw new Error('Network response was not ok');
+
                 const projects = await res.json();
 
                 if (!projects || projects.length === 0) {
                     container.innerHTML = `
-            <div class="col-span-full glass-card p-8 rounded-2xl text-center text-gray-400 text-sm">
-              ยังไม่มีข้อมูลผลงานในขณะนี้
-            </div>`;
+                        <div class="col-span-full glass-card p-8 rounded-2xl text-center text-gray-400 text-sm">
+                            ยังไม่มีข้อมูลผลงานในขณะนี้
+                        </div>`;
                     return;
                 }
 
                 container.innerHTML = projects.map(p => `
-          <div class="glass-card rounded-2xl overflow-hidden group hover:border-accent/40 transition-all duration-300">
-            <div class="h-48 bg-dark-card overflow-hidden relative">
-              <img src="${p.coverImage || 'https://via.placeholder.com/400x250/121216/FF6FAE?text=Project+Preview'}" 
-                alt="${p.titleTh}" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            </div>
-            <div class="p-6 space-y-2">
-              <h3 class="text-lg font-bold text-white group-hover:text-accent transition-colors">${p.titleTh}</h3>
-              <p class="text-xs text-gray-400 leading-relaxed">${p.shortDescTh}</p>
-            </div>
-          </div>
-        `).join('');
+                    <div class="glass-card rounded-2xl overflow-hidden group hover:border-accent/40 transition-all duration-300 flex flex-col h-full">
+                        <div class="h-48 bg-dark-card overflow-hidden relative">
+                            <img src="${p.coverImage || 'https://via.placeholder.com/400x250/121216/FF6FAE?text=Project+Preview'}" 
+                                alt="${p.titleTh || 'Project Image'}" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <div class="p-6 space-y-2 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-accent transition-colors">${p.titleTh || p.title || 'Untitled Project'}</h3>
+                                <p class="text-xs text-gray-400 leading-relaxed mt-2">${p.shortDescTh || p.description || ''}</p>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
             } catch (err) {
                 container.innerHTML = `
-          <div class="col-span-full glass-card p-8 rounded-2xl text-center text-gray-400 text-sm">
-            ไม่สามารถเชื่อมต่อกับ Server ได้
-          </div>`;
+                    <div class="col-span-full glass-card p-8 rounded-2xl text-center text-gray-400 text-sm">
+                        ไม่สามารถเชื่อมต่อกับ Server ได้
+                    </div>`;
+            } finally {
+                lucide.createIcons();
             }
         }
 
         document.getElementById('contact-form').addEventListener('submit', async(e) => {
             e.preventDefault();
+            const submitBtn = document.getElementById('submit-btn');
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
+
+            // ปิดการกดปุ่มชั่วคราวเพื่อป้องกันกดซ้ำ
+            submitBtn.disabled = true;
+            submitBtn.querySelector('span').innerText = 'กำลังส่ง...';
 
             try {
                 const res = await fetch(`${API_URL}/messages`, {
@@ -219,9 +240,15 @@
                 if (res.ok) {
                     alert('ส่งข้อความเรียบร้อยแล้ว!');
                     e.target.reset();
+                } else {
+                    throw new Error('Failed to send message');
                 }
             } catch (err) {
                 alert('เกิดข้อผิดพลาด ไม่สามารถส่งข้อความได้');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.querySelector('span').innerText = 'ส่งข้อความ';
+                lucide.createIcons();
             }
         });
 
