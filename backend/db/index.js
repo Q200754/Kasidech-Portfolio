@@ -116,6 +116,8 @@ async function initTables() {
   const textType = isSQLite ? 'TEXT' : 'VARCHAR(255)';
   const longTextType = isSQLite ? 'TEXT' : 'TEXT';
   const booleanType = isSQLite ? 'INTEGER' : 'BOOLEAN';
+  const booleanTrue = isSQLite ? '1' : 'TRUE';
+  const booleanFalse = isSQLite ? '0' : 'FALSE';
 
   console.log('Initializing database tables...');
 
@@ -171,7 +173,7 @@ async function initTables() {
       description_en ${longTextType},
       level INTEGER DEFAULT 0,
       display_order INTEGER DEFAULT 0,
-      enabled ${booleanType} DEFAULT 1
+      enabled ${booleanType} DEFAULT ${booleanTrue}
     )
   `);
 
@@ -193,7 +195,7 @@ async function initTables() {
       live_demo_url ${textType},
       start_date ${textType},
       end_date ${textType},
-      featured ${booleanType} DEFAULT 0,
+      featured ${booleanType} DEFAULT ${booleanFalse},
       status ${textType} DEFAULT 'Completed'
     )
   `);
@@ -279,7 +281,7 @@ async function initTables() {
       file_path ${textType} NOT NULL,
       file_size INTEGER DEFAULT 0,
       upload_date ${textType},
-      is_current ${booleanType} DEFAULT 0
+      is_current ${booleanType} DEFAULT ${booleanFalse}
     )
   `);
 
@@ -379,10 +381,12 @@ async function seedData() {
     ];
 
     for (const skill of initialSkills) {
+      const skillParams = [...skill];
+      skillParams[7] = skillParams[7] === 1 ? true : false;
       await query(`
         INSERT INTO skills (name, category, icon, description_th, description_en, level, display_order, enabled)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-      `, skill);
+      `, skillParams);
     }
     console.log('- Skills seeded.');
 
@@ -426,13 +430,15 @@ async function seedData() {
     ];
 
     for (const proj of initialProjects) {
+      const projParams = [...proj];
+      projParams[14] = projParams[14] === 1 ? true : false;
       await query(`
         INSERT INTO projects (
           name_th, name_en, slug, description_th, description_en,
           full_description_th, full_description_en, cover_image, category,
           technologies, github_url, live_demo_url, start_date, end_date, featured, status
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-      `, proj);
+      `, projParams);
     }
     console.log('- Projects seeded.');
 
