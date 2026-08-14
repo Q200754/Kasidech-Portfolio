@@ -120,74 +120,52 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="py-12">
-            <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-4">
-                <h2 class="text-2xl font-bold flex items-center gap-2">
-                    <i data-lucide="code-2" class="text-accent w-6 h-6"></i> Skills
-                </h2>
-                <span class="text-xs text-gray-400">Technologies I use</span>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="glass-card rounded-2xl p-5">
-                    <p class="text-xs uppercase tracking-[0.2em] text-gray-400 mb-3">Frontend</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-200">HTML</span>
-                        <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-200">CSS</span>
-                        <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-200">JavaScript</span>
-                        <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-200">React</span>
-                        <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-200">Tailwind</span>
-                    </div>
+        <section id="skills" class="py-8">
+            <div class="glass-card rounded-3xl p-8 border border-white/10 shadow-2xl relative overflow-hidden">
+                <div class="flex items-center gap-3 mb-6 border-b border-white/10 pb-4">
+                    <i data-lucide="code-2" class="text-accent w-6 h-6"></i>
+                    <h2 class="text-2xl font-bold tracking-tight text-white">Programming Skills</h2>
                 </div>
 
-                <div class="glass-card rounded-2xl p-5">
-                    <h6 class="text-xs uppercase tracking-[0.2em] text-gray-400 mb-3">Backend (JavaScript,Python,Java)</h6>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-200">Node.js</span>
-                        <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-200">Express</span>
-                        <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-200">REST API</span>
-                        <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-200">JWT</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 rounded-xl bg-white/5 border border-white/5 hover:border-accent/30 transition-all">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-accent text-base">JavaScript</span>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-accent/20 text-accent font-semibold">Good</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-2 leading-relaxed">สามารถเขียนโค้ดและเข้าใจการทำงานของเว็บได้ดี</p>
                     </div>
-                </div>
 
-                <div class="glass-card rounded-2xl p-5 bg-yellow-300 text-black border border-yellow-200 shadow-lg shadow-yellow-500/10">
-                    <h6 class="text-2xl font-black mb-4 tracking-tight">Programming Skills</h6>
-                    <div class="space-y-4 text-lg font-semibold leading-relaxed">
-                        <div>
-                            <span class="mr-2">•</span>
-                            <span>.JavaScript: Good</span>
-                            <div class="text-base font-medium italic opacity-80">(สามารถเขียนโค้ดและเข้าใจการทำงานของเว็บได้ดี)</div>
+                    <div class="p-4 rounded-xl bg-white/5 border border-white/5 hover:border-accent/30 transition-all">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-accent text-base">Python</span>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-blue-500/20 text-blue-400 font-semibold">Intermediate</span>
                         </div>
-                        <div>
-                            <span class="mr-2">•</span>
-                            <span>Python: Intermediate</span>
-                            <div class="text-base font-medium italic opacity-80">(สามารถใช้ภาษาอยู่ในเกณฑ์ที่พอใช้ได้)</div>
-                        </div>
-                        <div>
-                            <span class="mr-2">•</span>
-                            <span>.HTML/ CSS: Good</span>
-                            <div class="text-base font-medium italic opacity-80">(เป็นภาษาที่ผมคิดว่าเขียนได้ดีที่ดีสุด)</div>
-                        </div>
-                        <div>
-                            <span class="mr-2">•</span>
-                            <span>SQL: Fair</span>
-                            <div class="text-base font-medium italic opacity-80">(เข้าใจการใช้ฐานข้อมูลและเขียนคำสั่งพื้นฐานได้)</div>
-                        </div>
-                        <div>
-                            <span class="mr-2">•</span>
-                            <span>.Node\.js: Fair</span>
-                            <div class="text-base font-medium italic opacity-80">(เข้าใจพื้นฐานและสามารถสร้าง API เบื้องต้น)</div>
-                        </div>
+                        <p class="text-xs text-gray-400 mt-2 leading-relaxed">สามารถใช้ภาษาอยู่ในเกณฑ์ที่พอใช้ได้</p>
                     </div>
-                </div>
 
-                <div class="glass-card rounded-2xl p-5">
-                    <h6 class="text-xs uppercase tracking-[0.2em] text-gray-400 mb-3">Tools (Git,GitHub,Vercel,Figma)</h6>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-200">Git</span>
-                        <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-200">GitHub</span>
-                        <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-200">Vercel</span>
-                        <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-200">Figma</span>
+                    <div class="p-4 rounded-xl bg-white/5 border border-white/5 hover:border-accent/30 transition-all">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-accent text-base">HTML / CSS</span>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-accent/20 text-accent font-semibold">Good</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-2 leading-relaxed">เป็นภาษาที่ผมคิดว่าเขียนได้ดีที่สุด</p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-white/5 border border-white/5 hover:border-accent/30 transition-all">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-accent text-base">SQL</span>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-yellow-500/20 text-yellow-400 font-semibold">Fair</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-2 leading-relaxed">เข้าใจการใช้ฐานข้อมูลและเขียนคำสั่งพื้นฐานได้</p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-white/5 border border-white/5 hover:border-accent/30 transition-all md:col-span-2">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-accent text-base">Node.js</span>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-yellow-500/20 text-yellow-400 font-semibold">Fair</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-2 leading-relaxed">เข้าใจพื้นฐานและสามารถสร้าง API เบื้องต้น</p>
                     </div>
                 </div>
             </div>
@@ -242,19 +220,19 @@
             const mockProjects = [{
                 title: 'ระบบจัดเลี้ยงโรงอาหาร',
                 description: 'ระบบบริหารจัดการการจัดเลี้ยงและอาหารสำหรับโรงเรียน/สถาบัน',
-                image: 'images/catering.png',
+                image: '/images/catering.png',
                 link: 'https://canteen-meal-notification-system.vercel.app/',
                 tags: ['Web Application', 'Node.js', 'Database']
             }, {
                 title: 'PRTC Meeting Booking',
                 description: 'ระบบจองห้องประชุมและติดตามการนัดหมายภายในองค์กรแบบเรียลไทม์',
-                image: 'images/PRTC-Meeting-Booking.png',
+                image: '/images/PRTC-Meeting-Booking.png',
                 link: 'https://prtc-meeting-booking.vercel.app/',
                 tags: ['Next.js', 'TailwindCSS', 'Prisma']
             }, {
-                title: 'PRTC-Vehicle-Request-Management-System',
+                title: 'PRTC Vehicle Request Management System',
                 description: 'ระบบจัดการคำร้องขอใช้รถยนต์ของวิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา รองรับการสร้างคำร้อง การอนุมัติ และการติดตามสถานะ',
-                image: 'images/PRTC-Vehicle-Request-Management-System.png',
+                image: '/images/PRTC-Vehicle-Request-Management-System.png',
                 link: 'https://prtc-vehicle-request-management-sys.vercel.app/',
                 tags: ['React', 'TailwindCSS', 'API']
             }];
