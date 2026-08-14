@@ -115,7 +115,7 @@
             </h1>
 
             <p class="text-slate-600 max-w-lg mx-auto text-sm sm:text-base leading-relaxed">
-                มุ่งมั่นพัฒนาซอฟต์แวร์ด้วย Modern Architecture, Clean Code และ Seamless User Experience
+                ชอบสร้างสรรค์งานกราฟิก เรียนรู้เทคโนโลยีใหม่ๆ และพัฒนาทักษะด้านการออกแบบ เว็บไซต์ และ AI
             </p>
 
             <div class="pt-4 flex items-center justify-center gap-4">
@@ -352,19 +352,30 @@
                         </div>
 
                         <div class="space-y-2 text-slate-600 text-xs leading-relaxed">
-                            <p class="text-base font-bold text-slate-800">ทักษะการผลิตสื่อดิจิทัล</p>
-                            <p class="text-slate-500">วิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา</p>
-                            <p class="text-slate-600 pt-1">
-                                การแข่งขันทักษะวิชาชีพ ประเภทวิชาผลิตสื่อดิจิทัล ระดับปวช. ประจำปีการศึกษา 2568 โดยได้รับ รางวัลเกียรติบัตรเหรียญเงิน
+                            <p class="text-base font-bold text-accent">
+                                ทักษะแข่งขันผลิตสื่อดิจิทัล
                             </p>
+
+                            <p class="text-slate-500">
+                                วิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา
+                            </p>
+
+                            <div class="text-slate-600 pt-1">
+                                <h3 class="text-base font-bold text-slate-800">
+                                    ได้รับรางวัลเกียรติบัตรเหรียญเงิน
+                                </h3>
+
+                                <p class="mt-1">
+                                    จากการแข่งขันทักษะวิชาชีพ ประเภทวิชาผลิตสื่อดิจิทัล ระดับ ปวช. ประจำปีการศึกษา 2568
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 overflow-hidden rounded-[22px] border border-sky-100 bg-white p-2 shadow-inner">
+                            <img src="/images/วิทยาลัยเทคโนโลยีภาคตะวันออก (อี.เทค).jpg" alt="Certificate of Information Technology" class="w-full h-[250px] md:h-[280px] object-contain rounded-[16px] bg-white group-hover:scale-[1.01] transition-transform duration-300" />
                         </div>
                     </div>
-
-                    <div class="mt-4 overflow-hidden rounded-[22px] border border-sky-100 bg-white p-2 shadow-inner">
-                        <img src="/images/วิทยาลัยเทคโนโลยีภาคตะวันออก (อี.เทค).jpg" alt="Certificate of Information Technology" class="w-full h-[250px] md:h-[280px] object-contain rounded-[16px] bg-white group-hover:scale-[1.01] transition-transform duration-300" />
-                    </div>
                 </div>
-            </div>
         </section>
 
         <!-- 8. Future Goal Section -->
@@ -426,50 +437,50 @@
             © 2026 Kasidech Noytomtuon. All rights reserved.
         </footer>
 
-    </div>
+        </div>
 
-    <!-- JavaScript -->
-    <script>
-        const viewportShell = document.getElementById('viewport-shell');
+        <!-- JavaScript -->
+        <script>
+            const viewportShell = document.getElementById('viewport-shell');
 
-        function applyViewportScale() {
-            const baseWidth = 1200;
-            const minScale = 0.8;
-            const maxScale = 1;
-            const scale = Math.min(maxScale, Math.max(minScale, window.innerWidth / baseWidth));
-            const width = Math.min(1200, Math.max(960, baseWidth * scale));
-            viewportShell.style.setProperty('--page-width', `${width}px`);
-        }
+            function applyViewportScale() {
+                const baseWidth = 1200;
+                const minScale = 0.8;
+                const maxScale = 1;
+                const scale = Math.min(maxScale, Math.max(minScale, window.innerWidth / baseWidth));
+                const width = Math.min(1200, Math.max(960, baseWidth * scale));
+                viewportShell.style.setProperty('--page-width', `${width}px`);
+            }
 
-        window.addEventListener('resize', applyViewportScale);
-        applyViewportScale();
+            window.addEventListener('resize', applyViewportScale);
+            applyViewportScale();
 
-        lucide.createIcons();
+            lucide.createIcons();
 
-        function loadProjects() {
-            const container = document.getElementById('project-list');
+            function loadProjects() {
+                const container = document.getElementById('project-list');
 
-            const mockProjects = [{
-                title: 'ระบบจัดเลี้ยงโรงอาหาร',
-                description: 'ระบบบริหารจัดการการจัดเลี้ยงและอาหารสำหรับโรงเรียน/สถาบัน',
-                image: '/images/catering.png',
-                link: 'https://canteen-meal-notification-system.vercel.app/',
-                tags: ['Web Application', 'Node.js', 'Database']
-            }, {
-                title: 'PRTC Meeting Booking',
-                description: 'ระบบจองห้องประชุมและติดตามการนัดหมายภายในองค์กรแบบเรียลไทม์',
-                image: '/images/PRTC-Meeting-Booking.png',
-                link: 'https://prtc-meeting-booking.vercel.app/',
-                tags: ['Next.js', 'TailwindCSS', 'Prisma']
-            }, {
-                title: 'PRTC Vehicle Request Management System',
-                description: 'ระบบจัดการคำร้องขอใช้รถยนต์ของวิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา รองรับการสร้างคำร้อง การอนุมัติ และการติดตามสถานะ',
-                image: '/images/PRTC-Vehicle-Request-Management-System.png',
-                link: 'https://prtc-vehicle-request-management-sys.vercel.app/',
-                tags: ['React', 'TailwindCSS', 'API']
-            }];
+                const mockProjects = [{
+                    title: 'ระบบจัดเลี้ยงโรงอาหาร',
+                    description: 'ระบบบริหารจัดการการจัดเลี้ยงและอาหารสำหรับโรงเรียน/สถาบัน',
+                    image: '/images/catering.png',
+                    link: 'https://canteen-meal-notification-system.vercel.app/',
+                    tags: ['Web Application', 'Node.js', 'Database']
+                }, {
+                    title: 'PRTC Meeting Booking',
+                    description: 'ระบบจองห้องประชุมและติดตามการนัดหมายภายในองค์กรแบบเรียลไทม์',
+                    image: '/images/PRTC-Meeting-Booking.png',
+                    link: 'https://prtc-meeting-booking.vercel.app/',
+                    tags: ['Next.js', 'TailwindCSS', 'Prisma']
+                }, {
+                    title: 'PRTC Vehicle Request Management System',
+                    description: 'ระบบจัดการคำร้องขอใช้รถยนต์ของวิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา รองรับการสร้างคำร้อง การอนุมัติ และการติดตามสถานะ',
+                    image: '/images/PRTC-Vehicle-Request-Management-System.png',
+                    link: 'https://prtc-vehicle-request-management-sys.vercel.app/',
+                    tags: ['React', 'TailwindCSS', 'API']
+                }];
 
-            container.innerHTML = mockProjects.map(p => `
+                container.innerHTML = mockProjects.map(p => `
                 <a href="${p.link || '#'}" target="_blank" class="glass-card rounded-2xl overflow-hidden group hover:border-sky-300 transition-all duration-300 flex flex-col h-full cursor-pointer block">
                     <div class="h-48 bg-sky-50 overflow-hidden relative">
                         <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -496,7 +507,7 @@
         });
 
         loadProjects();
-    </script>
+        </script>
 </body>
 
 </html>
