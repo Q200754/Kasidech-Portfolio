@@ -15,14 +15,14 @@
                 extend: {
                     colors: {
                         accent: {
-                            DEFAULT: '#FF6FAE',
-                            hover: '#e55a98',
-                            glow: 'rgba(255, 111, 174, 0.25)'
+                            DEFAULT: '#0D8DE9',
+                            hover: '#0B78C8',
+                            glow: 'rgba(13, 141, 233, 0.18)'
                         },
                         dark: {
-                            bg: '#0A0A0C',
-                            card: '#121216',
-                            border: '#22222A'
+                            bg: '#EAF5FF',
+                            card: '#F8FBFF',
+                            border: '#CFE8FF'
                         }
                     }
                 }
@@ -39,16 +39,17 @@
     <style>
         body {
             font-family: 'Plus Jakarta Sans', 'Prompt', sans-serif;
-            background-color: #0A0A0C;
-            color: #FFFFFF;
+            background: linear-gradient(180deg, #edf6ff 0%, #f9fbff 100%);
+            color: #0f172a;
         }
         /* Glassmorphism Effect */
         
         .glass-card {
-            background: rgba(18, 18, 22, 0.65);
+            background: rgba(255, 255, 255, 0.82);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(13, 141, 233, 0.12);
+            box-shadow: 0 12px 30px rgba(13, 141, 233, 0.08);
         }
         /* Fix Browser Autofill Background Color */
         
@@ -56,8 +57,8 @@
         input:-webkit-autofill:hover,
         input:-webkit-autofill:focus,
         textarea:-webkit-autofill {
-            -webkit-text-fill-color: #ffffff !important;
-            -webkit-box-shadow: 0 0 0px 1000px #121216 inset !important;
+            -webkit-text-fill-color: #0f172a !important;
+            -webkit-box-shadow: 0 0 0px 1000px #f4faff inset !important;
             transition: background-color 5000s ease-in-out 0s;
         }
     </style>
@@ -76,22 +77,22 @@
             <a href="#" class="text-xl font-extrabold tracking-wider">
                 KASIDECH<span class="text-accent">.DEV</span>
             </a>
-            <a href="#contact" class="px-5 py-2 rounded-full text-xs font-semibold bg-white/5 border border-white/10 hover:border-accent hover:text-accent transition-all duration-300">
+            <a href="#contact" class="px-5 py-2 rounded-full text-xs font-semibold bg-sky-50 border border-sky-200 text-sky-700 hover:border-accent hover:text-accent transition-all duration-300">
                 Contact Me
             </a>
         </header>
 
         <!-- Hero Section -->
         <section class="py-16 text-center space-y-5">
-            <span class="text-accent font-semibold tracking-widest text-xs uppercase px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 inline-block">
+            <span class="text-accent font-semibold tracking-widest text-xs uppercase px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block">
                 FULL-STACK DEVELOPER
             </span>
 
-            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-sky-600 to-blue-800">
                 กษิเดช น้อยลมทวน
             </h1>
 
-            <p class="text-gray-400 max-w-lg mx-auto text-sm sm:text-base leading-relaxed">
+            <p class="text-slate-600 max-w-lg mx-auto text-sm sm:text-base leading-relaxed">
                 มุ่งมั่นพัฒนาซอฟต์แวร์ด้วย Modern Architecture, Clean Code และ Seamless User Experience
             </p>
 
@@ -317,20 +318,20 @@
                 <form id="contact-form" class="space-y-5">
                     <div class="space-y-1.5">
                         <label for="name" class="text-xs font-semibold text-gray-400 block">ชื่อของคุณ</label>
-                        <input type="text" id="name" required placeholder="เช่น สมชาย ใจดี" class="w-full px-4 py-3 rounded-xl bg-dark-card border border-dark-border text-white placeholder-gray-600 text-sm focus:border-accent outline-none transition-colors" />
+                        <input type="text" id="name" required placeholder="เช่น สมชาย ใจดี" class="w-full px-4 py-3 rounded-xl bg-white border border-sky-200 text-slate-800 placeholder-slate-400 text-sm focus:border-accent outline-none transition-colors" />
                     </div>
 
                     <div class="space-y-1.5">
                         <label for="email" class="text-xs font-semibold text-gray-400 block">อีเมล</label>
-                        <input type="email" id="email" required placeholder="your.email@example.com" class="w-full px-4 py-3 rounded-xl bg-dark-card border border-dark-border text-white placeholder-gray-600 text-sm focus:border-accent outline-none transition-colors" />
+                        <input type="email" id="email" required placeholder="your.email@example.com" class="w-full px-4 py-3 rounded-xl bg-white border border-sky-200 text-slate-800 placeholder-slate-400 text-sm focus:border-accent outline-none transition-colors" />
                     </div>
 
                     <div class="space-y-1.5">
                         <label for="message" class="text-xs font-semibold text-gray-400 block">ข้อความ</label>
-                        <textarea id="message" rows="4" required placeholder="พิมพ์รายละเอียดข้อความของคุณ..." class="w-full px-4 py-3 rounded-xl bg-dark-card border border-dark-border text-white placeholder-gray-600 text-sm focus:border-accent outline-none transition-colors resize-none"></textarea>
+                        <textarea id="message" rows="4" required placeholder="พิมพ์รายละเอียดข้อความของคุณ..." class="w-full px-4 py-3 rounded-xl bg-white border border-sky-200 text-slate-800 placeholder-slate-400 text-sm focus:border-accent outline-none transition-colors resize-none"></textarea>
                     </div>
 
-                    <button type="submit" id="submit-btn" class="w-full py-3.5 rounded-xl bg-accent text-white font-semibold hover:bg-accent-hover transition-all shadow-lg shadow-accent/20 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
+                    <button type="submit" id="submit-btn" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold hover:from-sky-600 hover:to-blue-700 transition-all shadow-lg shadow-sky-200 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
                         <i data-lucide="send" class="w-4 h-4"></i> <span>ส่งข้อความ</span>
                     </button>
                 </form>
@@ -373,17 +374,17 @@
             }];
 
             container.innerHTML = mockProjects.map(p => `
-                <a href="${p.link || '#'}" target="_blank" class="glass-card rounded-2xl overflow-hidden group hover:border-accent/40 transition-all duration-300 flex flex-col h-full cursor-pointer block">
-                    <div class="h-48 bg-dark-card overflow-hidden relative">
+                <a href="${p.link || '#'}" target="_blank" class="glass-card rounded-2xl overflow-hidden group hover:border-sky-300 transition-all duration-300 flex flex-col h-full cursor-pointer block">
+                    <div class="h-48 bg-sky-50 overflow-hidden relative">
                         <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
                     <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-lg font-bold text-white group-hover:text-accent transition-colors">${p.title}</h3>
-                            <p class="text-xs text-gray-400 leading-relaxed mt-2">${p.description}</p>
+                            <h3 class="text-lg font-bold text-slate-800 group-hover:text-accent transition-colors">${p.title}</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed mt-2">${p.description}</p>
                         </div>
                         <div class="flex flex-wrap gap-2 pt-2">
-                            ${p.tags.map(tag => `<span class="text-[10px] bg-white/5 border border-white/10 px-2.5 py-1 rounded-md text-gray-300">${tag}</span>`).join('')}
+                            ${p.tags.map(tag => `<span class="text-[10px] bg-sky-50 border border-sky-200 px-2.5 py-1 rounded-md text-sky-700">${tag}</span>`).join('')}
                         </div>
                     </div>
                 </a>
