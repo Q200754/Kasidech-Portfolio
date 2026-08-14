@@ -1,40 +1,39 @@
 <!DOCTYPE html>
-<html lang="th" class="dark scroll-smooth">
+<html lang="th">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>กษิเดช น้อยลมทวน | Full-Stack Developer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Tailwind CSS CDN -->
+    <title>KASIDECH Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        accent: {
-                            DEFAULT: '#0D8DE9',
-                            hover: '#0B78C8',
-                            glow: 'rgba(13, 141, 233, 0.18)'
-                        },
-                        dark: {
-                            bg: '#EAF5FF',
-                            card: '#F8FBFF',
-                            border: '#CFE8FF'
-                        }
+                        accent: '#0D8DE9',
+                        'accent-hover': '#0877C7',
+                        'accent-glow': 'rgba(13, 141, 233, 0.12)'
                     }
                 }
             }
         }
     </script>
-
-    <!-- Google Fonts & Lucide Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
         body {
@@ -42,7 +41,6 @@
             background: linear-gradient(180deg, #edf6ff 0%, #f9fbff 100%);
             color: #0f172a;
         }
-        /* Glassmorphism Effect */
         
         .glass-card {
             background: rgba(255, 255, 255, 0.82);
@@ -51,7 +49,6 @@
             border: 1px solid rgba(13, 141, 233, 0.12);
             box-shadow: 0 12px 30px rgba(13, 141, 233, 0.08);
         }
-        /* Fix Browser Autofill Background Color */
         
         input:-webkit-autofill,
         input:-webkit-autofill:hover,
@@ -89,25 +86,54 @@
 
         <!-- Header / Navbar -->
         <header class="py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+
             <a href="#" class="text-xl font-extrabold tracking-wider">
                 KASIDECH<span class="text-accent">.Portfolio</span>
             </a>
+
             <div class="flex flex-wrap items-center justify-center gap-2">
-                <a href="#about" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-sky-50 border border-sky-200 text-sky-700 hover:border-accent hover:text-accent transition-all duration-300">About Me</a>
-                <a href="#education" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-sky-50 border border-sky-200 text-sky-700 hover:border-accent hover:text-accent transition-all duration-300">Education</a>
-                <a href="#skills" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-sky-50 border border-sky-200 text-sky-700 hover:border-accent hover:text-accent transition-all duration-300">Skills</a>
-                <a href="#projects" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-sky-50 border border-sky-200 text-sky-700 hover:border-accent hover:text-accent transition-all duration-300">Projects</a>
-                <a href="#certificate" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-sky-50 border border-sky-200 text-sky-700 hover:border-accent hover:text-accent transition-all duration-300">Certificates</a>
-                <a href="#activities" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-sky-50 border border-sky-200 text-sky-700 hover:border-accent hover:text-accent transition-all duration-300">Activities</a>
-                <a href="#goals" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-sky-50 border border-sky-200 text-sky-700 hover:border-accent hover:text-accent transition-all duration-300">Goals</a>
-                <a href="#contact" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-accent text-white hover:bg-accent-hover transition-all duration-300 shadow-sm">Contact</a>
+
+                <a href="#about" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-sky-50 border border-sky-200 text-sky-700 hover:border-accent hover:text-accent transition-all duration-300">
+                    About Me
+                </a>
+
+                <a href="#education" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-sky-50 border border-sky-200 text-sky-700 hover:border-accent hover:text-accent transition-all duration-300">
+                    Education
+                </a>
+
+                <a href="#skills" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-sky-50 border border-sky-200 text-sky-700 hover:border-accent hover:text-accent transition-all duration-300">
+                    Skills
+                </a>
+
+                <a href="#projects" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-sky-50 border border-sky-200 text-sky-700 hover:border-accent hover:text-accent transition-all duration-300">
+                    Projects
+                </a>
+
+                <a href="#certificate" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-sky-50 border border-sky-200 text-sky-700 hover:border-accent hover:text-accent transition-all duration-300">
+                    Certificates
+                </a>
+
+                <a href="#activities" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-sky-50 border border-sky-200 text-sky-700 hover:border-accent hover:text-accent transition-all duration-300">
+                    Activities
+                </a>
+
+                <a href="#goals" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-sky-50 border border-sky-200 text-sky-700 hover:border-accent hover:text-accent transition-all duration-300">
+                    Goals
+                </a>
+
+                <a href="#contact" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-accent text-white hover:bg-accent-hover transition-all duration-300 shadow-sm">
+                    Contact
+                </a>
+
             </div>
         </header>
 
+
         <!-- 1. Cover / Hero Section -->
         <section class="py-16 text-center space-y-5">
+
             <span class="text-accent font-semibold tracking-widest text-xs uppercase px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block">
-                FULL-STACK DEVELOPER
+                GRAPHIC DESIGNER & WEB DEVELOPER
             </span>
 
             <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-sky-600 to-blue-800">
@@ -119,239 +145,519 @@
             </p>
 
             <div class="pt-4 flex items-center justify-center gap-4">
+
                 <a href="#projects" class="px-7 py-3 rounded-xl bg-accent text-white text-sm font-semibold hover:bg-accent-hover transition-all shadow-lg shadow-accent/20 hover:scale-[1.02]">
                     View Projects
                 </a>
+
                 <a href="#contact" class="px-7 py-3 rounded-xl bg-white border border-sky-200 text-sky-700 text-sm font-semibold shadow-sm hover:bg-sky-50 transition-all">
                     Get In Touch
                 </a>
+
             </div>
         </section>
 
+
         <!-- 2. About Me Section -->
         <section id="about" class="py-12">
+
             <div class="text-center mb-10 space-y-2">
-                <span class="text-xs font-semibold text-accent tracking-widest uppercase">ประวัติโดยย่อ</span>
-                <h2 class="text-3xl font-extrabold tracking-tight">เกี่ยวกับฉัน<span class="text-accent">.</span></h2>
+                <span class="text-xs font-semibold text-accent tracking-widest uppercase">
+                    ประวัติโดยย่อ
+                </span>
+
+                <h2 class="text-3xl font-extrabold tracking-tight">
+                    เกี่ยวกับฉัน<span class="text-accent">.</span>
+                </h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- การ์ดข้อมูลส่วนตัว -->
+
+                <!-- Personal Information -->
                 <div class="glass-card p-6 rounded-3xl space-y-4 hover:border-accent/30 transition-all duration-300">
+
                     <div class="w-10 h-10 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent">
                         <i data-lucide="user" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="text-xl font-bold">ข้อมูลส่วนตัว</h3>
+
+                    <h3 class="text-xl font-bold">
+                        ข้อมูลส่วนตัว
+                    </h3>
+
                     <p class="text-xs text-slate-600 leading-relaxed">
                         ผมเป็นนักศึกษาที่ชอบงานกราฟิกและการออกแบบ มีพื้นฐานการเขียนโค้ดและพัฒนาเว็บไซต์ และใช้ AI ช่วยในการสร้างสรรค์และพัฒนาผลงาน
                     </p>
+
                     <div class="space-y-1.5 text-xs pt-2 border-t border-sky-100">
-                        <p><strong class="text-accent">ชื่อ-สกุล:</strong> กษิเดช น้อยลมทวน</p>
-                        <p><strong class="text-accent">การศึกษา:</strong> เทคโนโลยีสารสนเทศ</p>
-                        <p><strong class="text-accent">ศึกษาอยู่ที่:</strong> วิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา</p>
-                        <p><strong class="text-accent">ที่อยู่:</strong> ประเทศไทย</p>
-                        <p><strong class="text-accent">อีเมล:</strong> kasidechnoytomtuonnn@gmail.com</p>
+
+                        <p>
+                            <strong class="text-accent">ชื่อ-สกุล:</strong> กษิเดช น้อยลมทวน
+                        </p>
+
+                        <p>
+                            <strong class="text-accent">การศึกษา:</strong> เทคโนโลยีสารสนเทศ
+                        </p>
+
+                        <p>
+                            <strong class="text-accent">ศึกษาอยู่ที่:</strong> วิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา
+                        </p>
+
+                        <p>
+                            <strong class="text-accent">ที่อยู่:</strong> 24/51 ถ. เทศบาล5 ต.ตลาดหลวง อ.เมือง อำเภอจังหวัดอ่างทอง, 14000
+                        </p>
+
+                        <p>
+                            <strong class="text-accent">อีเมล:</strong> kasidechnoytomtuonnn@gmail.com
+                        </p>
+
                     </div>
                 </div>
 
-                <!-- การ์ดการเรียนและความสนใจ -->
+
+                <!-- Learning & Interests -->
                 <div class="glass-card p-6 rounded-3xl space-y-4 hover:border-accent/30 transition-all duration-300">
+
                     <div class="w-10 h-10 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent">
                         <i data-lucide="graduation-cap" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="text-xl font-bold">การเรียนและความสนใจ</h3>
+
+                    <h3 class="text-xl font-bold">
+                        การเรียนและความสนใจ
+                    </h3>
+
                     <p class="text-xs text-slate-600 leading-relaxed">
                         สนใจด้านกราฟิก การออกแบบ การพัฒนาเว็บไซต์ และเทคโนโลยี AI พร้อมเรียนรู้และพัฒนาทักษะใหม่ๆ อยู่เสมอ
                     </p>
+
                     <div class="space-y-2 text-xs text-slate-700 pt-2 border-t border-sky-100">
+
                         <div class="flex items-center gap-2">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent shrink-0"></i>
                             <span>สนใจ Web Development & Full-Stack</span>
                         </div>
+
                         <div class="flex items-center gap-2">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent shrink-0"></i>
                             <span>พัฒนาโปรเจกต์เว็บแอปพลิเคชัน</span>
                         </div>
+
                         <div class="flex items-center gap-2">
                             <i data-lucide="check-circle-2" class="w-4 h-4 text-accent shrink-0"></i>
                             <span>จัดการฐานข้อมูลด้วย MySQL & SQL</span>
                         </div>
+
                     </div>
                 </div>
+
             </div>
         </section>
+
 
         <!-- 3. Education Section -->
         <section id="education" class="py-12">
+
             <div class="mb-10 text-center space-y-2">
-                <span class="text-xs font-semibold text-accent tracking-widest uppercase">ประวัติการเรียน</span>
-                <h2 class="text-3xl font-extrabold tracking-tight">ประวัติการศึกษา<span class="text-accent">.</span></h2>
+
+                <span class="text-xs font-semibold text-accent tracking-widest uppercase">
+                    ประวัติการเรียน
+                </span>
+
+                <h2 class="text-3xl font-extrabold tracking-tight">
+                    ประวัติการศึกษา<span class="text-accent">.</span>
+                </h2>
+
             </div>
 
             <div class="glass-card rounded-[28px] p-6 md:p-8 border border-sky-200">
+
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-sky-100 pb-4">
+
                     <div>
-                        <span class="text-xs font-bold text-accent tracking-wider uppercase">2569 - ปัจจุบัน</span>
-                        <h3 class="text-2xl font-bold text-slate-800 mt-1">กำลังศึกษาภายใต้ระดับชั้น ปวช. ปีที่ 3</h3>
-                        <p class="text-sm text-slate-500 font-medium">วิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา</p>
+
+                        <span class="text-xs font-bold text-accent tracking-wider uppercase">
+                            2569 - ปัจจุบัน
+                        </span>
+
+                        <h3 class="text-2xl font-bold text-slate-800 mt-1">
+                            กำลังศึกษาภายใต้ระดับชั้น ปวช. ปีที่ 3
+                        </h3>
+
+                        <p class="text-sm text-slate-500 font-medium">
+                            วิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา
+                        </p>
+
                     </div>
-                    <span class="self-start md:self-center px-3.5 py-1 rounded-full bg-sky-100 text-sky-700 text-xs font-semibold">กำลังศึกษา</span>
+
+                    <span class="self-start md:self-center px-3.5 py-1 rounded-full bg-sky-100 text-sky-700 text-xs font-semibold">
+                        กำลังศึกษา
+                    </span>
+
                 </div>
+
                 <div class="mt-4 space-y-2 text-slate-600 text-sm leading-relaxed">
-                    <p>สถาบันการศึกษาระดับวิชาชีพที่เน้นการเรียนรู้ด้านเทคโนโลยีสารสนเทศ และการพัฒนาซอฟต์แวร์ที่ตอบโจทย์การใช้งานจริง</p>
-                    <p>มุ่งเน้นการเรียนรู้ด้านการพัฒนาเว็บไซต์, การออกแบบ UI/UX, การจัดการระบบฐานข้อมูล และการเชื่อมโยงระบบเครือข่าย</p>
+
+                    <p>
+                        สถาบันการศึกษาระดับวิชาชีพที่เน้นการเรียนรู้ด้านเทคโนโลยีสารสนเทศ และการพัฒนาซอฟต์แวร์ที่ตอบโจทย์การใช้งานจริง
+                    </p>
+
+                    <p>
+                        มุ่งเน้นการเรียนรู้ด้านการพัฒนาเว็บไซต์, การออกแบบ UI/UX, การจัดการระบบฐานข้อมูล และการเชื่อมโยงระบบเครือข่าย
+                    </p>
+
                 </div>
+
             </div>
         </section>
+
 
         <!-- 4. Skills Section -->
         <section id="skills" class="py-12">
+
             <div class="mb-10 text-center space-y-2">
-                <span class="text-xs font-semibold text-accent tracking-widest uppercase">ทักษะความสามารถ</span>
-                <h2 class="text-3xl font-extrabold tracking-tight">ทักษะและความเชี่ยวชาญ<span class="text-accent">.</span></h2>
+
+                <span class="text-xs font-semibold text-accent tracking-widest uppercase">
+                    ทักษะความสามารถ
+                </span>
+
+                <h2 class="text-3xl font-extrabold tracking-tight">
+                    ทักษะและความเชี่ยวชาญ<span class="text-accent">.</span>
+                </h2>
+
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
                 <!-- Programming Skills -->
                 <div class="glass-card rounded-3xl p-8 border border-sky-200 shadow-2xl relative overflow-hidden">
+
                     <div class="flex items-center gap-3 mb-6 border-b border-sky-200 pb-4">
+
                         <i data-lucide="code-2" class="text-accent w-6 h-6"></i>
-                        <h3 class="text-2xl font-bold tracking-tight text-accent">Programming Skills</h3>
+
+                        <h3 class="text-2xl font-bold tracking-tight text-accent">
+                            Programming Skills
+                        </h3>
+
                     </div>
 
                     <div class="space-y-4">
+
+                        <!-- JavaScript -->
                         <div class="p-4 rounded-xl bg-sky-50 border border-sky-200 hover:border-sky-400 transition-all">
+
                             <div class="flex items-center justify-between">
+
                                 <div class="flex items-center gap-3">
-                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#F7C93B] text-[#0E1F2D] text-xs font-bold">JS</span>
-                                    <span class="font-bold text-slate-800 text-base">JavaScript</span>
+
+                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#F7C93B] text-[#0E1F2D] text-xs font-bold">
+                                        JS
+                                    </span>
+
+                                    <span class="font-bold text-slate-800 text-base">
+                                        JavaScript
+                                    </span>
+
                                 </div>
-                                <span class="text-xs px-2.5 py-1 rounded-full bg-sky-100 text-sky-700 font-semibold">Good</span>
+
+                                <span class="text-xs px-2.5 py-1 rounded-full bg-sky-100 text-sky-700 font-semibold">
+                                    Good
+                                </span>
+
                             </div>
-                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">สามารถเขียนโค้ดและเข้าใจการทำงานของเว็บได้ดี</p>
+
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                สามารถเขียนโค้ดและเข้าใจการทำงานของเว็บได้ดี
+                            </p>
+
                         </div>
 
+
+                        <!-- Python -->
                         <div class="p-4 rounded-xl bg-sky-50 border border-sky-200 hover:border-sky-400 transition-all">
+
                             <div class="flex items-center justify-between">
+
                                 <div class="flex items-center gap-3">
-                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#4B8BF5] text-white text-xs font-bold">Py</span>
-                                    <span class="font-bold text-slate-800 text-base">Python</span>
+
+                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#4B8BF5] text-white text-xs font-bold">
+                                        Py
+                                    </span>
+
+                                    <span class="font-bold text-slate-800 text-base">
+                                        Python
+                                    </span>
+
                                 </div>
-                                <span class="text-xs px-2.5 py-1 rounded-full bg-blue-100 text-blue-700 font-semibold">Intermediate</span>
+
+                                <span class="text-xs px-2.5 py-1 rounded-full bg-blue-100 text-blue-700 font-semibold">
+                                    Intermediate
+                                </span>
+
                             </div>
-                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">สามารถใช้ภาษาอยู่ในเกณฑ์ที่พอใช้ได้</p>
+
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                สามารถใช้ภาษาอยู่ในเกณฑ์ที่พอใช้ได้
+                            </p>
+
                         </div>
 
+
+                        <!-- HTML CSS -->
                         <div class="p-4 rounded-xl bg-sky-50 border border-sky-200 hover:border-sky-400 transition-all">
+
                             <div class="flex items-center justify-between">
+
                                 <div class="flex items-center gap-3">
-                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#E54B23] text-white text-xs font-bold">HTML</span>
-                                    <span class="font-bold text-slate-800 text-base">HTML / CSS</span>
+
+                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#E54B23] text-white text-xs font-bold">
+                                        HTML
+                                    </span>
+
+                                    <span class="font-bold text-slate-800 text-base">
+                                        HTML / CSS
+                                    </span>
+
                                 </div>
-                                <span class="text-xs px-2.5 py-1 rounded-full bg-sky-100 text-sky-700 font-semibold">Good</span>
+
+                                <span class="text-xs px-2.5 py-1 rounded-full bg-sky-100 text-sky-700 font-semibold">
+                                    Good
+                                </span>
+
                             </div>
-                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">เป็นภาษาที่ผมคิดว่าเขียนได้ดีที่สุด</p>
+
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                เป็นภาษาที่ผมคิดว่าเขียนได้ดีที่สุด
+                            </p>
+
                         </div>
 
+
+                        <!-- SQL -->
                         <div class="p-4 rounded-xl bg-sky-50 border border-sky-200 hover:border-sky-400 transition-all">
+
                             <div class="flex items-center justify-between">
+
                                 <div class="flex items-center gap-3">
-                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#F2B600] text-[#0E1F2D] text-xs font-bold">SQL</span>
-                                    <span class="font-bold text-slate-800 text-base">SQL</span>
+
+                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#F2B600] text-[#0E1F2D] text-xs font-bold">
+                                        SQL
+                                    </span>
+
+                                    <span class="font-bold text-slate-800 text-base">
+                                        SQL
+                                    </span>
+
                                 </div>
-                                <span class="text-xs px-2.5 py-1 rounded-full bg-yellow-100 text-yellow-700 font-semibold">Fair</span>
+
+                                <span class="text-xs px-2.5 py-1 rounded-full bg-yellow-100 text-yellow-700 font-semibold">
+                                    Fair
+                                </span>
+
                             </div>
-                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">เข้าใจการใช้ฐานข้อมูลและเขียนคำสั่งพื้นฐานได้</p>
+
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                เข้าใจการใช้ฐานข้อมูลและเขียนคำสั่งพื้นฐานได้
+                            </p>
+
                         </div>
 
+
+                        <!-- Node.js -->
                         <div class="p-4 rounded-xl bg-sky-50 border border-sky-200 hover:border-sky-400 transition-all">
+
                             <div class="flex items-center justify-between">
+
                                 <div class="flex items-center gap-3">
-                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#5D7EF5] text-white text-xs font-bold">Node</span>
-                                    <span class="font-bold text-slate-800 text-base">Node.js</span>
+
+                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#5D7EF5] text-white text-xs font-bold">
+                                        Node
+                                    </span>
+
+                                    <span class="font-bold text-slate-800 text-base">
+                                        Node.js
+                                    </span>
+
                                 </div>
-                                <span class="text-xs px-2.5 py-1 rounded-full bg-yellow-100 text-yellow-700 font-semibold">Fair</span>
+
+                                <span class="text-xs px-2.5 py-1 rounded-full bg-yellow-100 text-yellow-700 font-semibold">
+                                    Fair
+                                </span>
+
                             </div>
-                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">เข้าใจพื้นฐานและสามารถสร้าง API เบื้องต้น</p>
+
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                เข้าใจพื้นฐานและสามารถสร้าง API เบื้องต้น
+                            </p>
+
                         </div>
+
                     </div>
                 </div>
+
 
                 <!-- Design Skills -->
                 <div class="glass-card rounded-3xl p-8 border border-sky-200 shadow-2xl relative overflow-hidden">
+
                     <div class="flex items-center gap-3 mb-6 border-b border-sky-200 pb-4">
+
                         <i data-lucide="pen-tool" class="text-accent w-6 h-6"></i>
-                        <h3 class="text-2xl font-bold tracking-tight text-accent">Design Skills</h3>
+
+                        <h3 class="text-2xl font-bold tracking-tight text-accent">
+                            Design Skills
+                        </h3>
+
                     </div>
 
                     <div class="space-y-4">
+
+                        <!-- Photoshop -->
                         <div class="p-4 rounded-xl bg-sky-50 border border-sky-200 hover:border-sky-400 transition-all">
+
                             <div class="flex items-center justify-between">
+
                                 <div class="flex items-center gap-3">
-                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#00A2FF] text-white text-xs font-bold">Ps</span>
-                                    <span class="font-bold text-slate-800 text-base">Adobe Photoshop</span>
+
+                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#00A2FF] text-white text-xs font-bold">
+                                        Ps
+                                    </span>
+
+                                    <span class="font-bold text-slate-800 text-base">
+                                        Adobe Photoshop
+                                    </span>
+
                                 </div>
-                                <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700 font-semibold">Expert</span>
+
+                                <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700 font-semibold">
+                                    Expert
+                                </span>
+
                             </div>
-                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">ออกแบบภาพ, การแต่งภาพ, การปรับสี และงานกราฟิกเบื้องต้นได้ดี</p>
+
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                ออกแบบภาพ, การแต่งภาพ, การปรับสี และงานกราฟิกเบื้องต้นได้ดี
+                            </p>
+
                         </div>
 
+
+                        <!-- Illustrator -->
                         <div class="p-4 rounded-xl bg-sky-50 border border-sky-200 hover:border-sky-400 transition-all">
+
                             <div class="flex items-center justify-between">
+
                                 <div class="flex items-center gap-3">
-                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#FF7B00] text-white text-xs font-bold">Ai</span>
-                                    <span class="font-bold text-slate-800 text-base">Adobe Illustrator</span>
+
+                                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#FF7B00] text-white text-xs font-bold">
+                                        Ai
+                                    </span>
+
+                                    <span class="font-bold text-slate-800 text-base">
+                                        Adobe Illustrator
+                                    </span>
+
                                 </div>
-                                <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700 font-semibold">Expert</span>
+
+                                <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700 font-semibold">
+                                    Expert
+                                </span>
+
                             </div>
-                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">สามารถสร้างงานกราฟิก vector, โลโก้, ปก, และองค์ประกอบภาพได้อย่างมีประสิทธิภาพ</p>
+
+                            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                                สามารถสร้างงานกราฟิก vector, โลโก้, ปก, และองค์ประกอบภาพได้อย่างมีประสิทธิภาพ
+                            </p>
+
                         </div>
+
                     </div>
                 </div>
+
             </div>
         </section>
 
+
         <!-- 5. Projects Section -->
         <section id="projects" class="py-12">
+
             <div class="flex items-center justify-between mb-8 border-b border-sky-200 pb-4">
+
                 <h2 class="text-2xl font-bold flex items-center gap-2">
+
                     <i data-lucide="folder-git-2" class="text-accent w-6 h-6"></i> Featured Projects
+
                 </h2>
-                <span class="text-xs text-slate-500">ผลงานเด่นที่ผ่านมา</span>
+
+                <span class="text-xs text-slate-500">
+                    ผลงานเด่นที่ผ่านมา
+                </span>
+
             </div>
 
             <div id="project-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- JS ใส่การ์ดข้อมูลโปรเจกต์ -->
             </div>
+
         </section>
+
 
         <!-- 6. Certificates Section -->
         <section id="certificate" class="py-12">
+
             <div class="mb-10 text-center space-y-2">
-                <span class="text-xs font-semibold text-accent tracking-widest uppercase">Certificate</span>
-                <h2 class="text-3xl font-extrabold tracking-tight">เกียรติบัตร<span class="text-accent">.</span></h2>
+
+                <span class="text-xs font-semibold text-accent tracking-widest uppercase">
+                    Certificate
+                </span>
+
+                <h2 class="text-3xl font-extrabold tracking-tight">
+                    เกียรติบัตร<span class="text-accent">.</span>
+                </h2>
+
             </div>
 
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Certificate Card 1 -->
+
+                <!-- Certificate Card -->
                 <div class="glass-card rounded-[28px] p-5 border border-sky-200 shadow-[0_16px_40px_rgba(13,141,233,0.08)] group flex flex-col justify-between">
+
                     <div class="px-1 pb-1">
+
                         <div class="flex items-start justify-between gap-4 mb-4">
+
                             <div class="flex items-center gap-3">
+
                                 <div class="w-12 h-12 rounded-2xl bg-sky-100 border border-sky-200 flex items-center justify-center text-accent">
                                     <i data-lucide="award" class="w-6 h-6"></i>
                                 </div>
+
                                 <div>
-                                    <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-accent">Certificate</p>
-                                    <h3 class="text-lg font-bold text-slate-800 mt-0.5">แข่งขันทักษะวิชาชีพ</h3>
+
+                                    <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-accent">
+                                        Certificate
+                                    </p>
+
+                                    <h3 class="text-lg font-bold text-slate-800 mt-0.5">
+                                        แข่งขันทักษะวิชาชีพ
+                                    </h3>
+
                                 </div>
+
                             </div>
+
                             <span class="inline-flex items-center gap-1 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2.5 py-1">
-                                <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Verified
+
+                                <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
+
+                                Verified
+
                             </span>
+
                         </div>
 
+
                         <div class="space-y-2 text-slate-600 text-xs leading-relaxed">
+
                             <p class="text-base font-bold text-accent">
                                 ทักษะแข่งขันผลิตสื่อดิจิทัล
                             </p>
@@ -361,6 +667,7 @@
                             </p>
 
                             <div class="text-slate-600 pt-1">
+
                                 <h3 class="text-base font-bold text-slate-800">
                                     ได้รับรางวัลเกียรติบัตรเหรียญเงิน
                                 </h3>
@@ -368,146 +675,455 @@
                                 <p class="mt-1">
                                     จากการแข่งขันทักษะวิชาชีพ ประเภทวิชาผลิตสื่อดิจิทัล ระดับ ปวช. ประจำปีการศึกษา 2568
                                 </p>
+
                             </div>
+
                         </div>
+
 
                         <div class="mt-4 overflow-hidden rounded-[22px] border border-sky-100 bg-white p-2 shadow-inner">
-                            <img src="images/วิทยาลัยเทคโนโลยีภาคตะวันออก (อี.เทค).jpg" alt="Certificate of Information Technology" class="w-full h-[250px] md:h-[280px] object-contain rounded-[16px] bg-white group-hover:scale-[1.01] transition-transform duration-300" />
+
+                            <button type="button" class="certificate-trigger w-full block" data-image="images/วิทยาลัยเทคโนโลยีภาคตะวันออก (อี.เทค).jpg" aria-label="ดูภาพเกียรติบัตรเต็มรูปแบบ">
+
+                                <img
+                                    src="images/วิทยาลัยเทคโนโลยีภาคตะวันออก (อี.เทค).jpg"
+                                    alt="Certificate of Information Technology"
+                                    class="w-full h-[250px] md:h-[280px] object-contain rounded-[16px] bg-white group-hover:scale-[1.01] transition-transform duration-300 cursor-pointer"
+                                />
+
+                            </button>
+
                         </div>
-                    </div>
-                </div>
-        </section>
 
-        <!-- 8. Future Goal Section -->
-        <section id="goals" class="py-12">
-            <div class="mb-10 text-center space-y-2">
-                <span class="text-xs font-semibold text-accent tracking-widest uppercase">เป้าหมาย</span>
-                <h2 class="text-3xl font-extrabold tracking-tight">เป้าหมายในอนาคต<span class="text-accent">.</span></h2>
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="glass-card p-8 rounded-3xl max-w-3xl mx-auto space-y-4">
-                <div class="w-12 h-12 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent">
-                    <i data-lucide="target" class="w-6 h-6"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-slate-800">สู่การเป็น Full-Stack Developer & Specialist</h3>
-                <p class="text-sm text-slate-600 leading-relaxed">
-                    มุ่งมั่นพัฒนาทักษะด้านกราฟิก การเขียนโค้ด การออกแบบสถาปัตยกรรมระบบ และการประยุกต์ใช้เทคโนโลยี AI ให้เชี่ยวชาญ พร้อมสร้างสรรค์ผลิตภัณฑ์ดิจิทัลที่สามารถแก้ไขปัญหาและนำไปใช้งานได้จริงในระดับองค์กร
-                </p>
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="text-xs bg-sky-100 text-sky-700 px-3.5 py-1 rounded-full font-medium">Full-Stack Development</span>
-                    <span class="text-xs bg-sky-100 text-sky-700 px-3.5 py-1 rounded-full font-medium">UI/UX Graphic Design</span>
-                    <span class="text-xs bg-sky-100 text-sky-700 px-3.5 py-1 rounded-full font-medium">AI & Web Integration</span>
-                </div>
-            </div>
         </section>
 
-        <!-- 9. Contact Section -->
-        <section id="contact" class="py-12 mb-16">
-            <div class="glass-card p-8 rounded-3xl max-w-2xl mx-auto shadow-2xl">
-                <div class="text-center mb-8">
-                    <h2 class="text-2xl font-bold">ติดต่อพูดคุย</h2>
-                    <p class="text-slate-500 text-xs mt-1">ส่งข้อความถึงผมได้โดยตรงผ่านแบบฟอร์มนี้</p>
-                </div>
 
-                <form id="contact-form" class="space-y-5">
-                    <div class="space-y-1.5">
-                        <label for="name" class="text-xs font-semibold text-slate-600 block">ชื่อของคุณ</label>
-                        <input type="text" id="name" required placeholder="เช่น สมชาย ใจดี" class="w-full px-4 py-3 rounded-xl bg-white border border-sky-200 text-slate-800 placeholder-slate-400 text-sm focus:border-accent outline-none transition-colors" />
-                    </div>
+        <!-- Certificate Modal -->
+        <div id="certificate-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/70 p-4 backdrop-blur-sm">
 
-                    <div class="space-y-1.5">
-                        <label for="email" class="text-xs font-semibold text-slate-600 block">อีเมล</label>
-                        <input type="email" id="email" required placeholder="your.email@example.com" class="w-full px-4 py-3 rounded-xl bg-white border border-sky-200 text-slate-800 placeholder-slate-400 text-sm focus:border-accent outline-none transition-colors" />
-                    </div>
+            <div class="relative w-full max-w-5xl rounded-2xl bg-white p-3 shadow-2xl">
 
-                    <div class="space-y-1.5">
-                        <label for="message" class="text-xs font-semibold text-slate-600 block">ข้อความ</label>
-                        <textarea id="message" rows="4" required placeholder="พิมพ์รายละเอียดข้อความของคุณ..." class="w-full px-4 py-3 rounded-xl bg-white border border-sky-200 text-slate-800 placeholder-slate-400 text-sm focus:border-accent outline-none transition-colors resize-none"></textarea>
-                    </div>
+                <button type="button" id="close-certificate-modal" class="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-slate-900 text-white shadow-lg hover:bg-slate-700" aria-label="ปิดภาพเกียรติบัตร">
 
-                    <button type="submit" id="submit-btn" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold hover:from-sky-600 hover:to-blue-700 transition-all shadow-lg shadow-sky-200 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
-                        <i data-lucide="send" class="w-4 h-4"></i> <span>ส่งข้อความ</span>
-                    </button>
-                </form>
+                    <i data-lucide="x" class="h-4 w-4"></i>
+
+                </button>
+
+                <img id="certificate-modal-image" src="" alt="Certificate preview" class="max-h-[85vh] w-full rounded-xl object-contain bg-white" />
+
             </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="py-8 border-t border-sky-200 text-center text-xs text-slate-500">
-            © 2026 Kasidech Noytomtuon. All rights reserved.
-        </footer>
 
         </div>
 
-        <!-- JavaScript -->
-        <script>
-            const viewportShell = document.getElementById('viewport-shell');
 
-            function applyViewportScale() {
-                const baseWidth = 1200;
-                const minScale = 0.8;
-                const maxScale = 1;
-                const scale = Math.min(maxScale, Math.max(minScale, window.innerWidth / baseWidth));
-                const width = Math.min(1200, Math.max(960, baseWidth * scale));
-                viewportShell.style.setProperty('--page-width', `${width}px`);
-            }
+        <!-- 7. Activities Section -->
+        <section id="activities" class="py-12">
 
-            window.addEventListener('resize', applyViewportScale);
-            applyViewportScale();
+            <div class="mb-10 text-center space-y-2">
 
-            lucide.createIcons();
+                <span class="text-xs font-semibold text-accent tracking-widest uppercase">
+                    กิจกรรม
+                </span>
 
-            function loadProjects() {
-                const container = document.getElementById('project-list');
+                <h2 class="text-3xl font-extrabold tracking-tight">
+                    กิจกรรม<span class="text-accent">.</span>
+                </h2>
 
-                const mockProjects = [{
-                    title: 'ระบบจัดเลี้ยงโรงอาหาร',
-                    description: 'ระบบบริหารจัดการการจัดเลี้ยงและอาหารสำหรับโรงเรียน/สถาบัน',
-                    image: '/images/catering.png',
-                    link: 'https://canteen-meal-notification-system.vercel.app/',
-                    tags: ['Web Application', 'Node.js', 'Database']
-                }, {
-                    title: 'PRTC Meeting Booking',
-                    description: 'ระบบจองห้องประชุมและติดตามการนัดหมายภายในองค์กรแบบเรียลไทม์',
-                    image: '/images/PRTC-Meeting-Booking.png',
-                    link: 'https://prtc-meeting-booking.vercel.app/',
-                    tags: ['Next.js', 'TailwindCSS', 'Prisma']
-                }, {
-                    title: 'PRTC Vehicle Request Management System',
-                    description: 'ระบบจัดการคำร้องขอใช้รถยนต์ของวิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา รองรับการสร้างคำร้อง การอนุมัติ และการติดตามสถานะ',
-                    image: '/images/PRTC-Vehicle-Request-Management-System.png',
-                    link: 'https://prtc-vehicle-request-management-sys.vercel.app/',
-                    tags: ['React', 'TailwindCSS', 'API']
-                }];
+            </div>
 
-                container.innerHTML = mockProjects.map(p => `
-                <a href="${p.link || '#'}" target="_blank" class="glass-card rounded-2xl overflow-hidden group hover:border-sky-300 transition-all duration-300 flex flex-col h-full cursor-pointer block">
-                    <div class="h-48 bg-sky-50 overflow-hidden relative">
-                        <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+
+            <div class="glass-card rounded-3xl p-8 max-w-3xl mx-auto">
+
+                <div class="flex items-center gap-3 mb-5">
+
+                    <div class="w-12 h-12 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent">
+                        <i data-lucide="activity" class="w-6 h-6"></i>
                     </div>
-                    <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-lg font-bold text-slate-800 group-hover:text-accent transition-colors">${p.title}</h3>
-                            <p class="text-xs text-slate-600 leading-relaxed mt-2">${p.description}</p>
-                        </div>
-                        <div class="flex flex-wrap gap-2 pt-2">
-                            ${p.tags.map(tag => `<span class="text-[10px] bg-sky-50 border border-sky-200 px-2.5 py-1 rounded-md text-sky-700">${tag}</span>`).join('')}
-                        </div>
-                    </div>
+
+                    <h3 class="text-2xl font-bold">
+                        กิจกรรมและประสบการณ์
+                    </h3>
+
+                </div>
+
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    เข้าร่วมกิจกรรมและการแข่งขันที่เกี่ยวข้องกับการผลิตสื่อดิจิทัล การออกแบบ และเทคโนโลยี เพื่อพัฒนาทักษะจากการลงมือปฏิบัติจริง
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 8. Future Goal Section -->
+        <section id="goals" class="py-12">
+
+            <div class="mb-10 text-center space-y-2">
+
+                <span class="text-xs font-semibold text-accent tracking-widest uppercase">
+                    เป้าหมาย
+                </span>
+
+                <h2 class="text-3xl font-extrabold tracking-tight">
+                    เป้าหมายในอนาคต<span class="text-accent">.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="glass-card p-8 rounded-3xl max-w-3xl mx-auto space-y-4">
+
+                <div class="w-12 h-12 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent">
+
+                    <i data-lucide="target" class="w-6 h-6"></i>
+
+                </div>
+
+                <h3 class="text-2xl font-bold text-slate-800">
+                    สู่การเป็น Graphic Designer & Web Developer
+                </h3>
+
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    มุ่งมั่นพัฒนาทักษะด้านกราฟิก การเขียนโค้ด การพัฒนาเว็บไซต์ และการใช้ AI พร้อมสร้างผลงานที่สามารถนำไปใช้งานได้จริง
+                </p>
+
+                <div class="flex flex-wrap gap-2 pt-2">
+
+                    <span class="text-xs bg-sky-100 text-sky-700 px-3.5 py-1 rounded-full font-medium">
+                        Full-Stack Development
+                    </span>
+
+                    <span class="text-xs bg-sky-100 text-sky-700 px-3.5 py-1 rounded-full font-medium">
+                        UI/UX Graphic Design
+                    </span>
+
+                    <span class="text-xs bg-sky-100 text-sky-700 px-3.5 py-1 rounded-full font-medium">
+                        AI & Web Integration
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 9. Contact Section -->
+        <section id="contact" class="py-12 mb-8">
+
+            <div class="mb-10 text-center space-y-2">
+
+                <span class="text-xs font-semibold text-accent tracking-widest uppercase">
+                    ติดต่อ
+                </span>
+
+                <h2 class="text-3xl font-extrabold tracking-tight">
+                    ติดต่อ<span class="text-accent">.</span>
+                </h2>
+
+                <p class="text-sm text-slate-500 mt-2">
+                    สามารถติดต่อผมผ่านช่องทางด้านล่างได้เลย
+                </p>
+
+            </div>
+
+            <!-- Social Media Buttons -->
+            <div class="flex justify-center items-center gap-8 mt-8 -translate-y-6">
+
+                <!-- LINE -->
+                <a href="https://line.me/ti/p/p6VASkfpuR" target="_blank" rel="noopener noreferrer" aria-label="LINE" class="flex h-[100px] w-[100px] items-center justify-center rounded-[22px] bg-[#06C755] shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+
+                    <i class="fab fa-line text-[70px] text-white"></i>
+
                 </a>
-            `).join('');
 
-            lucide.createIcons();
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/share/1HqWYK7cS9/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="flex h-[100px] w-[100px] items-center justify-center rounded-[22px] bg-[#1877F2] shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+
+                    <i class="fab fa-facebook-f text-[76px] text-white"></i>
+
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/_ikkyu.x.200_?igsh=dXY4bmN0NXczbG1k&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="flex h-[100px] w-[100px] items-center justify-center rounded-[22px] bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+
+                    <i class="fab fa-instagram text-[76px] text-white"></i>
+
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="py-8 border-t border-sky-200 text-center text-xs text-slate-500">
+
+            © 2026 Kasidech Noytomtuon. All rights reserved.
+
+        </footer>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script>
+        /* =========================
+                                                                                                                                                                                                                                                                                                                                   Viewport Scale
+                                                                                                                                                                                                                                                                                                                                ========================= */
+
+        const viewportShell = document.getElementById('viewport-shell');
+
+        function applyViewportScale() {
+
+            const baseWidth = 1200;
+            const minScale = 0.8;
+            const maxScale = 1;
+
+            const scale = Math.min(
+                maxScale,
+                Math.max(minScale, window.innerWidth / baseWidth)
+            );
+
+            const width = Math.min(
+                1200,
+                Math.max(960, baseWidth * scale)
+            );
+
+            viewportShell.style.setProperty(
+                '--page-width',
+                `${width}px`
+            );
         }
 
-        document.getElementById('contact-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('ส่งข้อความเรียบร้อยแล้ว!');
-            e.target.reset();
-        });
+        window.addEventListener(
+            'resize',
+            applyViewportScale
+        );
+
+        applyViewportScale();
+
+
+        /* =========================
+           Lucide Icons
+        ========================= */
+
+        lucide.createIcons();
+
+
+        /* =========================
+           Projects
+        ========================= */
+
+        function loadProjects() {
+
+            const container =
+                document.getElementById('project-list');
+
+            const mockProjects = [
+
+                {
+                    title: 'ระบบจัดเลี้ยงโรงอาหาร',
+
+                    description: 'ระบบบริหารจัดการการจัดเลี้ยงและอาหารสำหรับโรงเรียน/สถาบัน',
+
+                    image: '/images/catering.png',
+
+                    link: 'https://canteen-meal-notification-system.vercel.app/',
+
+                    tags: [
+                        'Web Application',
+                        'Node.js',
+                        'Database'
+                    ]
+                },
+
+                {
+                    title: 'PRTC Meeting Booking',
+
+                    description: 'ระบบจองห้องประชุมและติดตามการนัดหมายภายในองค์กรแบบเรียลไทม์',
+
+                    image: '/images/PRTC-Meeting-Booking.png',
+
+                    link: 'https://prtc-meeting-booking.vercel.app/',
+
+                    tags: [
+                        'Next.js',
+                        'TailwindCSS',
+                        'Prisma'
+                    ]
+                },
+
+                {
+                    title: 'PRTC Vehicle Request Management System',
+
+                    description: 'ระบบจัดการคำร้องขอใช้รถยนต์ของวิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา รองรับการสร้างคำร้อง การอนุมัติ และการติดตามสถานะ',
+
+                    image: '/images/PRTC-Vehicle-Request-Management-System.png',
+
+                    link: 'https://prtc-vehicle-request-management-sys.vercel.app/',
+
+                    tags: [
+                        'React',
+                        'TailwindCSS',
+                        'API'
+                    ]
+                }
+
+            ];
+
+
+            container.innerHTML =
+                mockProjects.map(project => `
+
+                    <a
+                        href="${project.link || '#'}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="glass-card rounded-2xl overflow-hidden group hover:border-sky-300 transition-all duration-300 flex flex-col h-full cursor-pointer block"
+                    >
+
+                        <div class="h-48 bg-sky-50 overflow-hidden relative">
+
+                            <img
+                                src="${project.image}"
+                                alt="${project.title}"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
+
+                        </div>
+
+
+                        <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
+
+                            <div>
+
+                                <h3 class="text-lg font-bold text-slate-800 group-hover:text-accent transition-colors">
+                                    ${project.title}
+                                </h3>
+
+                                <p class="text-xs text-slate-600 leading-relaxed mt-2">
+                                    ${project.description}
+                                </p>
+
+                            </div>
+
+
+                            <div class="flex flex-wrap gap-2 pt-2">
+
+                                ${project.tags.map(tag => `
+
+                                    <span class="text-[10px] bg-sky-50 border border-sky-200 px-2.5 py-1 rounded-md text-sky-700">
+                                        ${tag}
+                                    </span>
+
+                                `).join('')}
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                `).join('');
+
+        }
+
+
+        /* =========================
+           Certificate Modal
+        ========================= */
+
+        const certificateModal =
+            document.getElementById('certificate-modal');
+
+        const certificateModalImage =
+            document.getElementById('certificate-modal-image');
+
+        const closeCertificateModal =
+            document.getElementById('close-certificate-modal');
+
+
+        document
+            .querySelectorAll('.certificate-trigger')
+            .forEach(button => {
+
+                button.addEventListener(
+                    'click',
+                    () => {
+
+                        const imageSrc =
+                            button.getAttribute('data-image');
+
+                        certificateModalImage.src =
+                            imageSrc;
+
+                        certificateModal.classList.remove(
+                            'hidden'
+                        );
+
+                        certificateModal.classList.add(
+                            'flex'
+                        );
+
+                    }
+                );
+
+            });
+
+
+        closeCertificateModal.addEventListener(
+            'click',
+            () => {
+
+                certificateModal.classList.add(
+                    'hidden'
+                );
+
+                certificateModal.classList.remove(
+                    'flex'
+                );
+
+                certificateModalImage.src = '';
+
+            }
+        );
+
+
+        certificateModal.addEventListener(
+            'click',
+            event => {
+
+                if (event.target === certificateModal) {
+
+                    certificateModal.classList.add(
+                        'hidden'
+                    );
+
+                    certificateModal.classList.remove(
+                        'flex'
+                    );
+
+                    certificateModalImage.src = '';
+
+                }
+
+            }
+        );
+
+
+        /* =========================
+           Load Projects
+        ========================= */
 
         loadProjects();
-        </script>
+    </script>
+
 </body>
 
 </html>
