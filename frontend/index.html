@@ -202,7 +202,7 @@
                             <div class="w-6 h-6 rounded-lg bg-[#5AC8FA] text-white flex items-center justify-center text-xs"><i data-lucide="info"></i></div>
                             <span>About Me</span>
                         </a>
-                        <a href="#education" class="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-black/[0.05] transition-all">
+                        <a href="#education" class="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-black/[0.05] transition-all bg-white border border-apple-border shadow-xs font-semibold">
                             <div class="w-6 h-6 rounded-lg bg-[#5856D6] text-white flex items-center justify-center text-xs"><i data-lucide="graduation-cap"></i></div>
                             <span>Education</span>
                         </a>
@@ -329,7 +329,7 @@
                             </div>
                         </div>
 
-                        <!-- System Settings List 2: การเรียนและความสนใจ -->
+                        <!-- System Settings List 2: การเรียนและความสนใจ (เพิ่มเรื่อง AI & กราฟิก) -->
                         <div class="space-y-2 pt-2">
                             <span class="text-[11px] font-bold text-apple-gray uppercase tracking-wider px-1">Learning & Interests</span>
                             <div class="settings-group">
@@ -360,34 +360,93 @@
                                     </div>
                                     <span class="text-[10px] mono bg-[#E5F2FF] text-[#007AFF] font-bold px-2 py-0.5 rounded">Active</span>
                                 </div>
+                                <div class="settings-row">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-7 h-7 rounded-lg bg-[#5AC8FA] text-white flex items-center justify-center text-xs"><i data-lucide="check"></i></div>
+                                        <span class="text-xs font-semibold text-[#1D1D1F]">ออกแบบสื่อดิจิทัล โลโก้ และงานกราฟิก (Photoshop & Illustrator)</span>
+                                    </div>
+                                    <span class="text-[10px] mono bg-[#E5F2FF] text-[#007AFF] font-bold px-2 py-0.5 rounded">Active</span>
+                                </div>
+                                <div class="settings-row">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-7 h-7 rounded-lg bg-[#5AC8FA] text-white flex items-center justify-center text-xs"><i data-lucide="check"></i></div>
+                                        <span class="text-xs font-semibold text-[#1D1D1F]">ประยุกต์ใช้ AI ช่วยเขียนโค้ดและเสริมสร้างไอเดียงานออกแบบ</span>
+                                    </div>
+                                    <span class="text-[10px] mono bg-[#E5F2FF] text-[#007AFF] font-bold px-2 py-0.5 rounded">Active</span>
+                                </div>
                             </div>
                         </div>
                     </section>
 
-                    <!-- 3. Education Section -->
+                    <!-- 3. Education Section (Custom Pill-Card Style with Large School Logos) -->
                     <section id="education" class="space-y-4">
                         <div class="flex items-center gap-2 pb-1">
                             <span class="text-xs font-bold text-apple-blue mono">02 //</span>
                             <h2 class="text-lg font-bold text-[#1D1D1F]">ประวัติการศึกษา<span class="text-apple-blue">.</span></h2>
                         </div>
 
-                        <div class="settings-group">
-                            <div class="p-5 border-b border-apple-border flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white">
-                                <div>
-                                    <span class="text-[11px] mono font-bold text-apple-blue uppercase">2569 - ปัจจุบัน</span>
-                                    <h3 class="text-base font-bold text-[#1D1D1F] mt-0.5">กำลังศึกษาภายใต้ระดับชั้น ปวช. ปีที่ 3</h3>
-                                    <p class="text-xs text-apple-gray">วิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา</p>
+                        <div class="space-y-3">
+                            <!-- 1. มัธยมศึกษาตอนต้น (โรงเรียนสตรีอ่างทอง) -->
+                            <div class="settings-group p-4 sm:p-5 rounded-2xl transition-all hover:border-apple-blue">
+                                <div class="grid grid-cols-12 items-center gap-3 sm:gap-4">
+                                    <!-- โลโก้โรงเรียนสตรีอ่างทอง (w-14 h-14) + ระดับชั้น -->
+                                    <div class="col-span-12 sm:col-span-4 flex items-center gap-3.5">
+                                        <div class="w-14 h-14 rounded-2xl bg-white border border-apple-border flex items-center justify-center p-1.5 shrink-0 overflow-hidden shadow-xs">
+                                            <img src="images/สตรีอ่างทอง.png" alt="ตราโรงเรียนสตรีอ่างทอง" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='images/logo-satriangthong.png';" />
+                                        </div>
+                                        <div>
+                                            <h4 class="text-xs sm:text-sm font-extrabold text-[#1D1D1F] tracking-tight">มัธยมศึกษา</h4>
+                                            <p class="text-[11px] text-apple-gray font-medium mt-0.5">ตอนต้น (ม.1 - ม.3)</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- ชื่อโรงเรียน -->
+                                    <div class="col-span-7 sm:col-span-5 pl-16 sm:pl-0">
+                                        <h4 class="text-[10px] mono uppercase text-apple-gray font-bold block">โรงเรียน</h4>
+                                        <p class="text-xs sm:text-sm font-bold text-[#1D1D1F] truncate mt-0.5">สตรีอ่างทอง</p>
+                                    </div>
+
+                                    <!-- GPAX: หัวข้อ <h4> สีฟ้า + ตัวเลข 3.22 สีเขียว -->
+                                    <div class="col-span-5 sm:col-span-3 text-left">
+                                        <h4 class="text-xs mono uppercase text-apple-blue font-extrabold tracking-wider block">GPAX</h4>
+                                        <p class="text-xs sm:text-sm font-extrabold text-[#34C759] mono mt-0.5">3.22 <span class="text-[10px] text-apple-gray font-normal">(6 เทอม)</span></p>
+                                    </div>
                                 </div>
-                                <span class="self-start sm:self-center px-3 py-1 rounded-full bg-[#E5F2FF] text-[#007AFF] text-xs font-bold mono">กำลังศึกษา</span>
                             </div>
-                            <div class="p-5 bg-white space-y-2 text-apple-gray text-xs leading-relaxed">
-                                <p>สถาบันการศึกษาระดับวิชาชีพที่เน้นการเรียนรู้ด้านเทคโนโลยีสารสนเทศ และการพัฒนาซอฟต์แวร์ที่ตอบโจทย์การใช้งานจริง</p>
-                                <p>มุ่งเน้นการเรียนรู้ด้านการพัฒนาเว็บไซต์, การออกแบบ UI/UX, การจัดการระบบฐานข้อมูล และการเชื่อมโยงระบบเครือข่าย</p>
+
+                            <!-- 2. ระดับประกาศนียบัตรวิชาชีพ (วิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา) -->
+                            <div class="settings-group p-4 sm:p-5 rounded-2xl transition-all hover:border-apple-blue">
+                                <div class="grid grid-cols-12 items-center gap-3 sm:gap-4">
+                                    <!-- โลโก้วิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา (w-14 h-14) + ระดับชั้น -->
+                                    <div class="col-span-12 sm:col-span-4 flex items-center gap-3.5">
+                                        <div class="w-14 h-14 rounded-2xl bg-white border border-apple-border flex items-center justify-center p-1.5 shrink-0 overflow-hidden shadow-xs">
+                                            <img src="images/ตราพระมหาไถ่.png" alt="ตราวิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='images/logo-prtc.png';" />
+                                        </div>
+                                        <div>
+                                            <h4 class="text-xs sm:text-sm font-extrabold text-[#1D1D1F] tracking-tight">ประกาศนียบัตรวิชาชีพ</h4>
+                                            <p class="text-[11px] text-apple-gray font-medium mt-0.5">ระดับชั้น ปวช. 3</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- ชื่อวิทยาลัย -->
+                                    <div class="col-span-7 sm:col-span-5 pl-16 sm:pl-0">
+                                        <h4 class="text-[10px] mono uppercase text-apple-gray font-bold block">สถานศึกษา</h4>
+                                        <p class="text-xs sm:text-sm font-bold text-[#1D1D1F] truncate mt-0.5">วิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา</p>
+                                    </div>
+
+                                    <!-- STATUS: หัวข้อ <h4> สีฟ้า + ป้ายสถานะ -->
+                                    <div class="col-span-5 sm:col-span-3 text-left">
+                                        <h4 class="text-xs mono uppercase text-apple-blue font-extrabold tracking-wider block">STATUS</h4>
+                                        <span class="inline-flex items-center gap-1 rounded-full bg-[#E5F2FF] text-apple-blue text-[10px] font-bold px-2.5 py-0.5 mono mt-0.5">
+                                            กำลังศึกษา
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
 
-                    <!-- 4. Skills Section -->
+                    <!-- 4. Skills Section (Balanced Grid Layout) -->
                     <section id="skills" class="space-y-4">
                         <div class="flex items-center gap-2 pb-1">
                             <span class="text-xs font-bold text-apple-blue mono">03 //</span>
@@ -395,65 +454,133 @@
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <!-- Programming Skills Group -->
+                            <!-- ฝั่งซ้าย: Programming Skills Group -->
                             <div class="space-y-2">
                                 <span class="text-[11px] font-bold text-apple-gray uppercase tracking-wider px-1">Programming Languages</span>
                                 <div class="settings-group">
+                                    <!-- JavaScript -->
                                     <div class="settings-row">
                                         <div class="space-y-0.5">
-                                            <span class="text-xs font-bold text-[#1D1D1F] block">JavaScript</span>
+                                            <div class="flex items-center gap-2">
+                                                <i class="fab fa-js text-[#EAB308] text-sm"></i>
+                                                <span class="text-xs font-bold text-[#1D1D1F]">JavaScript</span>
+                                            </div>
                                             <p class="text-[11px] text-apple-gray">สามารถเขียนโค้ดและเข้าใจการทำงานของเว็บได้ดี</p>
                                         </div>
-                                        <span class="text-[10px] mono font-bold bg-[#E5F2FF] text-[#007AFF] px-2.5 py-1 rounded-lg">Good</span>
+                                        <span class="text-[10px] mono font-bold bg-[#FEF9C3] text-[#CA8A04] px-2.5 py-1 rounded-lg">Good</span>
                                     </div>
+                                    <!-- Python -->
                                     <div class="settings-row">
                                         <div class="space-y-0.5">
-                                            <span class="text-xs font-bold text-[#1D1D1F] block">Python</span>
+                                            <div class="flex items-center gap-2">
+                                                <i class="fab fa-python text-[#3776AB] text-sm"></i>
+                                                <span class="text-xs font-bold text-[#1D1D1F]">Python</span>
+                                            </div>
                                             <p class="text-[11px] text-apple-gray">สามารถใช้ภาษาอยู่ในเกณฑ์ที่พอใช้ได้</p>
                                         </div>
-                                        <span class="text-[10px] mono font-bold bg-[#E5F2FF] text-[#007AFF] px-2.5 py-1 rounded-lg">Intermediate</span>
+                                        <span class="text-[10px] mono font-bold bg-[#E0F2FE] text-[#0284C7] px-2.5 py-1 rounded-lg">Intermediate</span>
                                     </div>
+                                    <!-- HTML / CSS -->
                                     <div class="settings-row">
                                         <div class="space-y-0.5">
-                                            <span class="text-xs font-bold text-[#1D1D1F] block">HTML / CSS</span>
+                                            <div class="flex items-center gap-2">
+                                                <i class="fab fa-html5 text-[#EA580C] text-sm"></i>
+                                                <i class="fab fa-css3-alt text-[#2563EB] text-sm -ml-1"></i>
+                                                <span class="text-xs font-bold text-[#1D1D1F]">HTML / CSS</span>
+                                            </div>
                                             <p class="text-[11px] text-apple-gray">เป็นภาษาที่ผมคิดว่าเขียนได้ดีที่สุด</p>
                                         </div>
-                                        <span class="text-[10px] mono font-bold bg-[#E5F2FF] text-[#007AFF] px-2.5 py-1 rounded-lg">Good</span>
+                                        <span class="text-[10px] mono font-bold bg-[#FFEDD5] text-[#C2410C] px-2.5 py-1 rounded-lg">Good</span>
                                     </div>
+                                    <!-- SQL -->
                                     <div class="settings-row">
                                         <div class="space-y-0.5">
-                                            <span class="text-xs font-bold text-[#1D1D1F] block">SQL</span>
+                                            <div class="flex items-center gap-2">
+                                                <i class="fas fa-database text-[#0284C7] text-xs"></i>
+                                                <span class="text-xs font-bold text-[#1D1D1F]">SQL</span>
+                                            </div>
                                             <p class="text-[11px] text-apple-gray">เข้าใจการใช้ฐานข้อมูลและเขียนคำสั่งพื้นฐานได้</p>
                                         </div>
-                                        <span class="text-[10px] mono font-bold bg-[#FFF2D6] text-[#FF9500] px-2.5 py-1 rounded-lg">Fair</span>
+                                        <span class="text-[10px] mono font-bold bg-[#FFF2D6] text-[#D97706] px-2.5 py-1 rounded-lg">Fair</span>
                                     </div>
+                                    <!-- Node.js -->
                                     <div class="settings-row">
                                         <div class="space-y-0.5">
-                                            <span class="text-xs font-bold text-[#1D1D1F] block">Node.js</span>
+                                            <div class="flex items-center gap-2">
+                                                <i class="fab fa-node-js text-[#16A34A] text-sm"></i>
+                                                <span class="text-xs font-bold text-[#1D1D1F]">Node.js</span>
+                                            </div>
                                             <p class="text-[11px] text-apple-gray">เข้าใจพื้นฐานและสามารถสร้าง API เบื้องต้น</p>
                                         </div>
-                                        <span class="text-[10px] mono font-bold bg-[#FFF2D6] text-[#FF9500] px-2.5 py-1 rounded-lg">Fair</span>
+                                        <span class="text-[10px] mono font-bold bg-[#DCFCE7] text-[#15803D] px-2.5 py-1 rounded-lg">Fair</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Design Skills Group -->
-                            <div class="space-y-2">
-                                <span class="text-[11px] font-bold text-apple-gray uppercase tracking-wider px-1">Design & Tools</span>
-                                <div class="settings-group">
-                                    <div class="settings-row">
-                                        <div class="space-y-0.5">
-                                            <span class="text-xs font-bold text-[#1D1D1F] block">Adobe Photoshop</span>
-                                            <p class="text-[11px] text-apple-gray leading-relaxed">ออกแบบภาพ, การแต่งภาพ, การปรับสี และงานกราฟิกเบื้องต้นได้ดี</p>
+                            <!-- ฝั่งขวา: Design & AI Tools -->
+                            <div class="space-y-6">
+                                <!-- Design & Tools -->
+                                <div class="space-y-2">
+                                    <span class="text-[11px] font-bold text-apple-gray uppercase tracking-wider px-1">Design & Tools</span>
+                                    <div class="settings-group">
+                                        <!-- Adobe Photoshop -->
+                                        <div class="settings-row">
+                                            <div class="space-y-0.5">
+                                                <div class="flex items-center gap-2">
+                                                    <span class="w-4 h-4 rounded bg-[#001E36] text-[#31A8FF] font-extrabold text-[9px] flex items-center justify-center leading-none">Ps</span>
+                                                    <span class="text-xs font-bold text-[#1D1D1F]">Adobe Photoshop</span>
+                                                </div>
+                                                <p class="text-[11px] text-apple-gray leading-relaxed">ออกแบบภาพ, การแต่งภาพ, การปรับสี และงานกราฟิกเบื้องต้นได้ดี</p>
+                                            </div>
+                                            <span class="text-[10px] mono font-bold bg-[#E0F2FE] text-[#0284C7] px-2.5 py-1 rounded-lg">Expert</span>
                                         </div>
-                                        <span class="text-[10px] mono font-bold bg-[#E8F9EE] text-[#34C759] px-2.5 py-1 rounded-lg">Expert</span>
+                                        <!-- Adobe Illustrator -->
+                                        <div class="settings-row">
+                                            <div class="space-y-0.5">
+                                                <div class="flex items-center gap-2">
+                                                    <span class="w-4 h-4 rounded bg-[#330000] text-[#FF9A00] font-extrabold text-[9px] flex items-center justify-center leading-none">Ai</span>
+                                                    <span class="text-xs font-bold text-[#1D1D1F]">Adobe Illustrator</span>
+                                                </div>
+                                                <p class="text-[11px] text-apple-gray leading-relaxed">
+                                                    สามารถสร้างงานกราฟิก vector, โลโก้, ปก, และองค์ประกอบภาพ<br class="hidden sm:inline">ได้อย่างมีประสิทธิภาพ
+                                                </p>
+                                            </div>
+                                            <span class="text-[10px] mono font-bold bg-[#FEF3C7] text-[#D97706] px-2.5 py-1 rounded-lg">Expert</span>
+                                        </div>
                                     </div>
-                                    <div class="settings-row">
-                                        <div class="space-y-0.5">
-                                            <span class="text-xs font-bold text-[#1D1D1F] block">Adobe Illustrator</span>
-                                            <p class="text-[11px] text-apple-gray leading-relaxed">สามารถสร้างงานกราฟิก vector, โลโก้, ปก, และองค์ประกอบภาพได้อย่างมีประสิทธิภาพ</p>
+                                </div>
+
+                                <!-- AI Assistant & Tools -->
+                                <div class="space-y-2">
+                                    <span class="text-[11px] font-bold text-apple-gray uppercase tracking-wider px-1">AI Assistant & Tools</span>
+                                    <div class="settings-group">
+                                        <div class="settings-row">
+                                            <div class="space-y-1">
+                                                <div class="flex flex-wrap items-center gap-2">
+                                                    <div class="flex items-center gap-1.5 text-xs font-bold">
+                                                        <!-- ChatGPT -->
+                                                        <span class="text-[#10A37F] font-extrabold flex items-center gap-1">
+                                                            <i class="fa-solid fa-bolt text-[10px]"></i> ChatGPT
+                                                        </span>
+                                                        <span class="text-apple-gray/40">•</span>
+                                                        <!-- Google Gemini -->
+                                                        <span class="bg-gradient-to-r from-[#1A73E8] to-[#9333EA] bg-clip-text text-transparent font-extrabold flex items-center gap-1">
+                                                            <i class="fa-solid fa-sparkles text-[10px] text-[#1A73E8]"></i> Gemini
+                                                        </span>
+                                                        <span class="text-apple-gray/40">•</span>
+                                                        <!-- Claude -->
+                                                        <span class="text-[#D97706] font-extrabold flex items-center gap-1">
+                                                            <i class="fa-solid fa-brain text-[10px]"></i> Claude
+                                                        </span>
+                                                    </div>
+                                                    <span class="text-[10px] mono bg-[#E5F2FF] text-[#007AFF] font-bold px-2 py-0.5 rounded">AI Workflow</span>
+                                                </div>
+                                                <p class="text-[11px] text-apple-gray leading-relaxed">
+                                                    ใช้ทำงานร่วมกันตั้งแต่คิดไอเดีย ออกแบบโครงสร้าง ช่วยเขียนและแก้โค้ด<br class="hidden sm:inline">ไปจนถึงจัดโค้ดให้พร้อมใช้งาน
+                                                </p>
+                                            </div>
+                                            <span class="text-[10px] mono font-bold bg-[#E8F9EE] text-[#34C759] px-2.5 py-1 rounded-lg shrink-0">Expert</span>
                                         </div>
-                                        <span class="text-[10px] mono font-bold bg-[#E8F9EE] text-[#34C759] px-2.5 py-1 rounded-lg">Expert</span>
                                     </div>
                                 </div>
                             </div>
@@ -716,7 +843,7 @@
                 tags: ['Next.js', 'TailwindCSS', 'Prisma']
             }, {
                 title: 'PRTC Vehicle Request Management System',
-                description: 'ระบบจัดการคำร้องขอใช้รถยนต์ของวิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา รองรับการสร้างคำร้อง การอนุมัติ และการติดตามสถานะ',
+                description: 'ระบบจัดการคำร้องขอใช้รถยนต์ของวิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา',
                 image: '/images/PRTC-Vehicle-Request-Management-System.png',
                 link: 'https://prtc-vehicle-request-management-sys.vercel.app/',
                 tags: ['React', 'TailwindCSS', 'API']
