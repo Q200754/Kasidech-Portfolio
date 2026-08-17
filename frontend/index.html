@@ -117,11 +117,11 @@
 
 <body class="min-h-screen relative overflow-x-hidden selection:bg-apple-blue selection:text-white pb-28">
 
-    <!-- Preloader Screen (3.0s Apple Boot) -->
+    <!-- Preloader Screen (Enlarged KN Logo) -->
     <div id="preloader" class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#F5F5F7]">
         <div class="flex flex-col items-center space-y-6">
-            <div class="w-16 h-16 flex items-center justify-center text-[#1D1D1F] text-5xl">
-                <i class="fab fa-apple"></i>
+            <div class="w-28 h-28 flex items-center justify-center overflow-hidden">
+                <img src="images/KN.png" alt="KN" class="w-full h-full object-contain" />
             </div>
             <div class="w-48 space-y-2">
                 <div class="w-full h-1 bg-[#E5E5EA] rounded-full overflow-hidden">
@@ -132,15 +132,17 @@
         </div>
     </div>
 
-    <!-- macOS Top Menu Bar -->
-    <header class="w-full h-7 bg-white/70 backdrop-blur-xl border-b border-apple-border px-4 flex items-center justify-between text-xs text-[#1D1D1F] sticky top-0 z-50 select-none">
-        <div class="flex items-center gap-4">
-            <i class="fab fa-apple text-sm text-[#1D1D1F] cursor-pointer"></i>
-            <span class="font-bold cursor-pointer">System Settings</span>
-            <span class="text-apple-gray hidden sm:inline cursor-pointer hover:text-[#1D1D1F]">Edit</span>
-            <span class="text-apple-gray hidden sm:inline cursor-pointer hover:text-[#1D1D1F]">View</span>
-            <span class="text-apple-gray hidden sm:inline cursor-pointer hover:text-[#1D1D1F]">Window</span>
-            <span class="text-apple-gray hidden sm:inline cursor-pointer hover:text-[#1D1D1F]">Help</span>
+    <!-- macOS Top Menu Bar (Shift ONLY KN Logo Left) -->
+    <header class="w-full h-11 bg-white/70 backdrop-blur-xl border-b border-apple-border pl-6 pr-4 flex items-center justify-between text-xs text-[#1D1D1F] sticky top-0 z-50 select-none">
+        <div class="flex items-center">
+            <img src="images/KN.png" alt="KN Logo" class="w-9 h-9 object-contain cursor-pointer shrink-0 -ml-2.5 mr-2" />
+            <div class="flex items-center gap-1.5">
+                <span class="font-bold cursor-pointer text-xs sm:text-sm px-1">System Settings</span>
+                <span class="text-apple-gray hidden sm:inline cursor-pointer hover:text-[#1D1D1F] px-1">Edit</span>
+                <span class="text-apple-gray hidden sm:inline cursor-pointer hover:text-[#1D1D1F] px-1">View</span>
+                <span class="text-apple-gray hidden sm:inline cursor-pointer hover:text-[#1D1D1F] px-1">Window</span>
+                <span class="text-apple-gray hidden sm:inline cursor-pointer hover:text-[#1D1D1F] px-1">Help</span>
+            </div>
         </div>
         <div class="flex items-center gap-3.5 text-[11px] text-[#1D1D1F] font-medium">
             <span class="cursor-pointer"><i data-lucide="battery-charging" class="w-4 h-4 inline"></i></span>
@@ -183,8 +185,8 @@
                 <aside class="lg:col-span-3 bg-apple-sidebar border-r border-apple-border p-4 space-y-6 select-none hidden lg:block">
                     <!-- Apple ID Profile Row -->
                     <div class="flex items-center gap-3 p-3 rounded-2xl bg-white border border-apple-border shadow-xs">
-                        <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-[#5AC8FA] to-apple-blue flex items-center justify-center text-white font-bold text-sm shadow-xs">
-                            KN
+                        <div class="w-11 h-11 flex items-center justify-center p-0 overflow-hidden shrink-0">
+                            <img src="images/KN.png" alt="KN Logo" class="w-full h-full object-contain scale-125">
                         </div>
                         <div class="truncate">
                             <h4 class="text-xs font-bold text-[#1D1D1F] truncate">กษิเดช น้อยลมทวน</h4>
@@ -301,7 +303,7 @@
                                 <div class="settings-row">
                                     <div class="flex items-center gap-3">
                                         <div class="w-7 h-7 rounded-lg bg-[#5856D6] text-white flex items-center justify-center text-xs"><i data-lucide="book-open"></i></div>
-                                        <span class="text-xs font-semibold text-[#1D1D1F]">สาขา</span>
+                                        <span class="text-xs font-semibold text-[#1D1D1F]">การศึกษา</span>
                                     </div>
                                     <span class="text-xs font-bold text-[#007AFF]">เทคโนโลยีสารสนเทศ</span>
                                 </div>
@@ -329,7 +331,7 @@
                             </div>
                         </div>
 
-                        <!-- System Settings List 2: การเรียนและความสนใจ (เพิ่มเรื่อง AI & กราฟิก) -->
+                        <!-- System Settings List 2: การเรียนและความสนใจ -->
                         <div class="space-y-2 pt-2">
                             <span class="text-[11px] font-bold text-apple-gray uppercase tracking-wider px-1">Learning & Interests</span>
                             <div class="settings-group">
@@ -378,7 +380,7 @@
                         </div>
                     </section>
 
-                    <!-- 3. Education Section (Custom Pill-Card Style with Large School Logos) -->
+                    <!-- 3. Education Section -->
                     <section id="education" class="space-y-4">
                         <div class="flex items-center gap-2 pb-1">
                             <span class="text-xs font-bold text-apple-blue mono">02 //</span>
@@ -387,54 +389,54 @@
 
                         <div class="space-y-3">
                             <!-- 1. มัธยมศึกษาตอนต้น (โรงเรียนสตรีอ่างทอง) -->
-                            <div class="settings-group p-4 sm:p-5 rounded-2xl transition-all hover:border-apple-blue">
+                            <div class="settings-group p-3.5 sm:p-4 rounded-2xl transition-all hover:border-apple-blue">
                                 <div class="grid grid-cols-12 items-center gap-3 sm:gap-4">
-                                    <!-- โลโก้โรงเรียนสตรีอ่างทอง (w-14 h-14) + ระดับชั้น -->
-                                    <div class="col-span-12 sm:col-span-4 flex items-center gap-3.5">
-                                        <div class="w-14 h-14 rounded-2xl bg-white border border-apple-border flex items-center justify-center p-1.5 shrink-0 overflow-hidden shadow-xs">
-                                            <img src="images/สตรีอ่างทอง.png" alt="ตราโรงเรียนสตรีอ่างทอง" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='images/logo-satriangthong.png';" />
+                                    <!-- โลโก้ + ระดับชั้น -->
+                                    <div class="col-span-12 sm:col-span-4 flex items-center gap-3">
+                                        <div class="w-11 h-11 rounded-xl bg-white border border-apple-border flex items-center justify-center p-0.5 shrink-0 overflow-hidden shadow-2xs">
+                                            <img src="images/สตรีอ่างทอง.png" alt="ตราโรงเรียนสตรีอ่างทอง" class="w-full h-full object-contain scale-110" onerror="this.onerror=null; this.src='images/logo-satriangthong.png';" />
                                         </div>
                                         <div>
                                             <h4 class="text-xs sm:text-sm font-extrabold text-[#1D1D1F] tracking-tight">มัธยมศึกษา</h4>
-                                            <p class="text-[11px] text-apple-gray font-medium mt-0.5">ตอนต้น (ม.1 - ม.3)</p>
+                                            <p class="text-[11px] text-apple-gray font-medium">ตอนต้น (ม.1 - ม.3)</p>
                                         </div>
                                     </div>
 
                                     <!-- ชื่อโรงเรียน -->
-                                    <div class="col-span-7 sm:col-span-5 pl-16 sm:pl-0">
+                                    <div class="col-span-7 sm:col-span-5 pl-14 sm:pl-0">
                                         <h4 class="text-[10px] mono uppercase text-apple-gray font-bold block">โรงเรียน</h4>
-                                        <p class="text-xs sm:text-sm font-bold text-[#1D1D1F] truncate mt-0.5">สตรีอ่างทอง</p>
+                                        <p class="text-xs sm:text-sm font-bold text-[#1D1D1F] truncate">สตรีอ่างทอง</p>
                                     </div>
 
-                                    <!-- GPAX: หัวข้อ <h4> สีฟ้า + ตัวเลข 3.22 สีเขียว -->
+                                    <!-- GPAX -->
                                     <div class="col-span-5 sm:col-span-3 text-left">
                                         <h4 class="text-xs mono uppercase text-apple-blue font-extrabold tracking-wider block">GPAX</h4>
-                                        <p class="text-xs sm:text-sm font-extrabold text-[#34C759] mono mt-0.5">3.22 <span class="text-[10px] text-apple-gray font-normal">(6 เทอม)</span></p>
+                                        <p class="text-xs sm:text-sm font-extrabold text-[#34C759] mono">3.22 <span class="text-[10px] text-apple-gray font-normal">(6 เทอม)</span></p>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- 2. ระดับประกาศนียบัตรวิชาชีพ (วิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา) -->
-                            <div class="settings-group p-4 sm:p-5 rounded-2xl transition-all hover:border-apple-blue">
+                            <div class="settings-group p-3.5 sm:p-4 rounded-2xl transition-all hover:border-apple-blue">
                                 <div class="grid grid-cols-12 items-center gap-3 sm:gap-4">
-                                    <!-- โลโก้วิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา (w-14 h-14) + ระดับชั้น -->
-                                    <div class="col-span-12 sm:col-span-4 flex items-center gap-3.5">
-                                        <div class="w-14 h-14 rounded-2xl bg-white border border-apple-border flex items-center justify-center p-1.5 shrink-0 overflow-hidden shadow-xs">
-                                            <img src="images/ตราพระมหาไถ่.png" alt="ตราวิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='images/logo-prtc.png';" />
+                                    <!-- โลโก้ + ระดับชั้น -->
+                                    <div class="col-span-12 sm:col-span-4 flex items-center gap-3">
+                                        <div class="w-11 h-11 rounded-xl bg-white border border-apple-border flex items-center justify-center p-0.5 shrink-0 overflow-hidden shadow-2xs">
+                                            <img src="images/ตราพระมหาไถ่.png" alt="ตราวิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา" class="w-full h-full object-contain scale-110" onerror="this.onerror=null; this.src='images/logo-prtc.png';" />
                                         </div>
                                         <div>
                                             <h4 class="text-xs sm:text-sm font-extrabold text-[#1D1D1F] tracking-tight">ประกาศนียบัตรวิชาชีพ</h4>
-                                            <p class="text-[11px] text-apple-gray font-medium mt-0.5">ระดับชั้น ปวช. 3</p>
+                                            <p class="text-[11px] text-apple-gray font-medium">ระดับชั้น ปวช. 3</p>
                                         </div>
                                     </div>
 
                                     <!-- ชื่อวิทยาลัย -->
-                                    <div class="col-span-7 sm:col-span-5 pl-16 sm:pl-0">
+                                    <div class="col-span-7 sm:col-span-5 pl-14 sm:pl-0">
                                         <h4 class="text-[10px] mono uppercase text-apple-gray font-bold block">สถานศึกษา</h4>
-                                        <p class="text-xs sm:text-sm font-bold text-[#1D1D1F] truncate mt-0.5">วิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา</p>
+                                        <p class="text-xs sm:text-sm font-bold text-[#1D1D1F] truncate">วิทยาลัยเทคโนโลยีพระมหาไถ่ พัทยา</p>
                                     </div>
 
-                                    <!-- STATUS: หัวข้อ <h4> สีฟ้า + ป้ายสถานะ -->
+                                    <!-- STATUS -->
                                     <div class="col-span-5 sm:col-span-3 text-left">
                                         <h4 class="text-xs mono uppercase text-apple-blue font-extrabold tracking-wider block">STATUS</h4>
                                         <span class="inline-flex items-center gap-1 rounded-full bg-[#E5F2FF] text-apple-blue text-[10px] font-bold px-2.5 py-0.5 mono mt-0.5">
